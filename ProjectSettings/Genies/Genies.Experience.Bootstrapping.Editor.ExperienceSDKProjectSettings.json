@@ -1,0 +1,49 @@
+{
+    "MonoBehaviour": {
+        "m_Enabled": true,
+        "m_EditorHideFlags": 0,
+        "m_Name": "",
+        "m_EditorClassIdentifier": "",
+        "experienceInformation": {
+            "mainScene": {
+                "instanceID": 0
+            },
+            "displayName": "",
+            "description": "",
+            "version": "",
+            "qualityLevel": 0,
+            "thumbnail": {
+                "instanceID": 0
+            },
+            "icon": {
+                "instanceID": 0
+            },
+            "background": {
+                "instanceID": 0
+            },
+            "startColor": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "endColor": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "experienceID": "",
+            "prodClientID": "",
+            "prodClientSecret": "",
+            "devClientID": "",
+            "devClientSecret": "",
+            "platformToggleConfig": {
+                "iOS": false,
+                "Android": false,
+                "StandaloneOSX": false,
+                "StandaloneWindows64": false
+            }
+        }
+    }
+}

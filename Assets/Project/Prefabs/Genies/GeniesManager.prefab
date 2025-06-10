@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4037916406721607593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9173937454848232176}
+  - component: {fileID: 567495369372039394}
+  m_Layer: 0
+  m_Name: GeniesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9173937454848232176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037916406721607593}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567495369372039394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037916406721607593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510c5ef8d6e9447039e6099beb3f34e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LegacyVogueAnim: {fileID: 7400000, guid: d77adf186a8a84cf9994ae553a4f9fb8, type: 2}
+  LegacyPeaceAnim: {fileID: 7400000, guid: d6b22b0ae1a754c9eaf8bf545044519e, type: 2}
+  LegacyWaveAnim: {fileID: 7400000, guid: dc91307d2470747648c6d1a045d8b4ab, type: 2}
+  Joystick: {fileID: 0}
+  _userGeniePrefab: {fileID: 4358128890973865638, guid: 6001e157c06e24475bb7bcb5880c6cc2,
+    type: 3}
+  _hintTextPrefab: {fileID: 8941270482910445250, guid: 1dcfa0bde252942faa7dcd3de1b57ee8,
+    type: 3}
+  ForceLookAtCamera: 0

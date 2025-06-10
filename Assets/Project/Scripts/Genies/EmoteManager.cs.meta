@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 334563d32952942cd8ec178b2dbd69cd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _geniesManager: {instanceID: 0}
+  - _inventoryManager: {instanceID: 0}
+  - _legacyVogueAnim: {fileID: 7400000, guid: d77adf186a8a84cf9994ae553a4f9fb8, type: 2}
+  - _legacyPeaceAnim: {fileID: 7400000, guid: d6b22b0ae1a754c9eaf8bf545044519e, type: 2}
+  - _legacyWaveAnim: {fileID: 7400000, guid: dc91307d2470747648c6d1a045d8b4ab, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

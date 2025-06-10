@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 838c8f11da3c84f868fb19c47d507a4e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - thumbnailTexture: {instanceID: 0}
+  - animator: {instanceID: 0}
+  - boxCollider: {instanceID: 0}
+  - eyesMidPoint: {instanceID: 0}
+  - geniesManager: {instanceID: 0}
+  - inputManager: {instanceID: 0}
+  - headTransform: {instanceID: 0}
+  - neckTransform: {instanceID: 0}
+  - spine1Transform: {instanceID: 0}
+  - spine2Transform: {instanceID: 0}
+  - chestTransform: {instanceID: 0}
+  - preloadFxPrefab: {instanceID: 0}
+  - teleportParticlesPrefab: {instanceID: 0}
+  - hintTextPrefab: {fileID: 8941270482910445250, guid: 1dcfa0bde252942faa7dcd3de1b57ee8,
+      type: 3}
+  - debugEyeR: {instanceID: 0}
+  - debugEyeL: {instanceID: 0}
+  - debugText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

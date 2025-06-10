@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4358128890973865638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024868431905065704}
+  - component: {fileID: 6162113104322088454}
+  m_Layer: 0
+  m_Name: UserGenie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2024868431905065704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358128890973865638}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6162113104322088454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358128890973865638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838c8f11da3c84f868fb19c47d507a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EmoteBlendWeight: 0
+  _emoteManager: {fileID: 0}
+  _thumbnailTexture: {fileID: 2800000, guid: d7ac172b588714a40ba8da3fcc16de1e, type: 3}
+  eyesMidPoint: {fileID: 0}
+  _blendshapeScale: 100
+  _lookInMaxVal: 1
+  _lookOutMaxVal: 1
+  _lookUpMaxVal: 0.5
+  _lookDownMaxVal: 1
+  _teleportParticlesPrefab: {fileID: 8815957496256774187, guid: 7fb8b174208f74e3b9cf6ca8aa9235df,
+    type: 3}
+  _preloadFxPrefab: {fileID: 8753959956810280623, guid: 1947f7464301e4c2497c0b9c6925a8a3,
+    type: 3}
