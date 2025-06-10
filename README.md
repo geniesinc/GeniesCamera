@@ -47,7 +47,7 @@ This section outlines the system requirements and installation steps necessary t
 ### **3.1 System Requirements**
 
 To build and run Genies Camera, you will need:
-
+- **Git LFS installation** This repository uses [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage).
 - **Compatible Mac computer**
 - **iPhone** or **iPad** with TrueDepth sensor (Facial Recognition abilities)
 - **Unity Editor** version 2022.3.32f1 or later
