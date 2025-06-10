@@ -176,3 +176,6 @@ In the Main scene, you’ll see several GameObjects.
 1. **Genie Controller**: This component is the main Genie controller. It manages user interaction, locomotion, and animation. 
 2. **Emote Manager**: This component manages “emotes” which override the default Animator controller, by crossfading influence of the Genie’s PlayableGraph.
 3. **Genie Face Controller**: This component listens for updates of ARKit’s facial tracking system and propagates that data to the Genie’s facial blendshapes and head pose.
+
+# Contact
+For questions or support, please contact: devrelations@genies.com
