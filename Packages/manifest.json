@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "com.genies.avatars.sdk": "1.0.23",
-    "com.genies.login.native": "1.4.0",
-    "com.genies.nativeapi": "1.1.2",
+    "com.genies.login.native": "1.5.1",
+    "com.genies.nativeapi": "1.2.2",
     "com.nobi.roundedcorners": "3.4.1",
     "com.judahperez.hsvcolorpicker": "3.3.0",
     "com.unity.2d.sprite": "1.0.0",
