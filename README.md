@@ -135,7 +135,7 @@ Please make sure your project is set to an iOS build.
 
 ### 5.1 Login
 
-Thank you for using Genies Camera! To create your own Genies avatar, for the moment please reach out to [devrelations@genies.com](mailto:devrelations@genies.com) for a TestFlight invitation.
+Thank you for using Genies Camera! To create your own Genies avatar, create a Genies account via [Genies Party](https://apps.apple.com/cz/app/genies-your-ai-sidekick/id6468962977) and design your avatar in-app.
 
 Once you have a Genies Party account, this avatar will now be recalled when you Login to the Main scene using your phone number. 
 
