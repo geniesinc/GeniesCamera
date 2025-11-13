@@ -551,8 +551,6 @@ public class GeniesManager : MonoBehaviour
             if (!_userGenieLoader.IsGenieLoaded || !UserGenie.IsGenieSetUp)
             {
                 await _userGenieLoader.LoadUserGenieAsync(UserGenie.transform);
-                // Remove any extra GeniesParty components
-                _userGenieLoader.StripDefaultComponents();
                 // Add any specific GeniesCamera components
                 UserGenie.SetupGenie();
             }

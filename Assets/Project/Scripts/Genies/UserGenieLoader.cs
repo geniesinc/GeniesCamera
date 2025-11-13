@@ -1,16 +1,15 @@
 using Cysharp.Threading.Tasks;
 using Genies.Avatars;
 using Genies.Avatars.Context;
+using Genies.Sdk;
 using Genies.Utilities.Internal;
 using UnityEngine;
 
 public class UserGenieLoader : MonoBehaviour
 {
-    [SerializeField] private Initializer _initializer;
     [SerializeField] private RuntimeAnimatorController _animatorController;
-    [SerializeField] private SerializableAvatarLoader _avatarLoader;
 
-    private IGenie _currGenieInstance;
+    private ManagedAvatar _currGenieInstance;
     private bool _isLoadingAsync = false;
 
     public bool IsGenieLoaded => _currGenieInstance != null && !_currGenieInstance.IsDisposed;
@@ -43,13 +42,9 @@ public class UserGenieLoader : MonoBehaviour
             _currGenieInstance.Dispose();
         }
 
-        // await for the avatars context initialization
-        Debug.Log("[UserGenieLoader] Calling WaitUntilInitializedAsync...");
-        await _initializer.WaitUntilInitializedAsync();
-
         // load avatar from the configured loader
         Debug.Log("[UserGenieLoader] Creating Genie Instance...");
-        _currGenieInstance = await _avatarLoader.LoadAsync(genieParent);
+        _currGenieInstance = await AvatarSdk.LoadUserAvatarAsync(parent:genieParent);
         Debug.Log("[UserGenieLoader] Created Genie Instance!");
 
         // adds specific animator if any
@@ -64,18 +59,5 @@ public class UserGenieLoader : MonoBehaviour
 
         // Complete Async load
         _isLoadingAsync = false;
-    }
-
-    public void StripDefaultComponents()
-    {
-        if (_isLoadingAsync || _currGenieInstance == null)
-        {
-            Debug.LogError("[UserGenieLoader] Genie not loaded or loading. Cannot strip components.");
-            return;
-        }
-
-        // Remove GeniesParty components that we may not need
-        Debug.Log("[UserGenieLoader] Removing GeniesParty components...");
-        _currGenieInstance.Components.RemoveAll();
     }
 }

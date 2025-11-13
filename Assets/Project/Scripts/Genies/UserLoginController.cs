@@ -15,7 +15,9 @@ using Genies.Login.Otp;
 using Genies.Services.Configs;
 using TMPro;
 using System.Net.NetworkInformation;
+using Genies.Login.AuthMessages;
 using Genies.NativeAPI;
+using Genies.Sdk;
 
 namespace Genies.Components.Accounts
 {
@@ -126,8 +128,8 @@ namespace Genies.Components.Accounts
             // Set the initial UI state
             ChangeToState(LOGIN_STATE.WAIT_VERIFY_CACHED_DATA);
 
-            // Try to login with cached data...
-            bool isSuccessful = InitializeLoginService();
+            // Initialize
+            bool isSuccessful = await InitializeApp();
             if (!isSuccessful)
             {
                 Debug.LogError("UserLoginController: Initialization failed.");
@@ -168,33 +170,9 @@ namespace Genies.Components.Accounts
             }
         }
 
-        private bool InitializeLoginService()
+        private async Task<bool> InitializeApp()
         {
-            string loginEndPoint = "";
-#if PRODUCTION_BUILD
-            BackendEnvironment environment = BackendEnvironment.Prod;
-            loginEndPoint = "https://api.genies.com";
-#else
-            BackendEnvironment environment = BackendEnvironment.Dev;
-            loginEndPoint = "https://api.dev.genies.com";
-#endif
-            
-            // 1) Set up login - Must be done first. Calling GeniesApiConfigManager.SetApiConfig will
-            // force the usage of the default login package
-            GeniesNativeAPIAuth auth = new GeniesNativeAPIAuth();
-            auth.InitializeAPI(loginEndPoint, "GeniesOnTheScene");
-            auth.RegisterSelf().As<IGeniesLogin>();
-            
-            // 2) Set up the API configuration
-            GeniesApiConfigManager.SetApiConfig(new GeniesApiConfig
-            {
-                TargetEnv = environment,
-            }, overwriteCurrent: true);
-
-            // 3) Set up the master dependency list
-            IAvatarService avatarService = new AvatarService();
-            avatarService.RegisterSelf().As<IAvatarService>();
-            
+            await AvatarSdk.InitializeAsync();
             return true;
         }
 
@@ -242,7 +220,7 @@ namespace Genies.Components.Accounts
             ChangeToState(LOGIN_STATE.WAIT_VERIFY_PHONE);
 
             var result = await _otpLoginFlowController.SubmitPhoneNumberAsync(phoneNumber);
-            Debug.Log($"UserLoginController: SubmitPhoneNumberAsync result: {result.statusCode} {result.errorMessage}");
+            Debug.Log($"UserLoginController: SubmitPhoneNumberAsync result: {result.StatusCodeString} {result.ErrorMessage}");
 
             // Make sure the user has enough time to read
             // the status message before we change it
@@ -253,20 +231,20 @@ namespace Genies.Components.Accounts
             }
 
             // Update the UI
-            if (result.isSuccessful)
+            if (result.IsSuccessful)
             {
                 ChangeToState(LOGIN_STATE.GET_USER_PIN);
             }
-            else if (result.statusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.USER_NOT_FOUND ||
-                    result.statusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.USER_NOT_CONFIRMED ||
-                    result.statusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.SIGN_UP_FAILED)
+            else if (result.ResponseStatusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.UserNotFound ||
+                    result.ResponseStatusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.UserNotConfirmed ||
+                    result.ResponseStatusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.SignUpFailed)
             {
                 Debug.Log("UserLoginController: User not found or not confirmed, or sign up failed.");
                 ChangeToState(LOGIN_STATE.NO_USER_ACCOUNT);
             }
             else
             {
-                string errorMessage = $"[ERROR {result.statusCodeString}] Failed to submit phone number.\n{result.errorMessage}";
+                string errorMessage = $"[ERROR {result.StatusCodeString}] Failed to submit phone number.\n{result.ErrorMessage}";
                 Debug.LogError("UserLoginController: " + errorMessage);
                 ChangeToState(LOGIN_STATE.SOMETHING_WENT_WRONG);
                 status.text = errorMessage;
@@ -277,13 +255,13 @@ namespace Genies.Components.Accounts
         {
             ChangeToState(LOGIN_STATE.WAIT_VERIFY_PIN);
             var result = await _otpLoginFlowController.SubmitOtpCodeAsync(code);
-            if (result.isSuccessful)
+            if (result.IsSuccessful)
             {
                 CompleteLoggedInState();
             }
             else
             {
-                string errorMessage = $"[ERROR {result.statusCodeString}] Failed to accept PIN.\n{result.errorMessage}";
+                string errorMessage = $"[ERROR {result.StatusCodeString}] Failed to accept PIN.\n{result.ErrorMessage}";
                 Debug.LogError("UserLoginController: " + errorMessage);
                 ChangeToState(LOGIN_STATE.SOMETHING_WENT_WRONG);
                 status.text = errorMessage;
@@ -344,12 +322,7 @@ namespace Genies.Components.Accounts
 
         private async void LogOutUser()
         {
-            var logoutResult = await GeniesLoginSdk.LogOutAsync();
-            if (!logoutResult.isSuccessful)
-            {
-                Debug.LogError($"UserLoginController: Logout failed: {logoutResult.errorMessage} Status code {logoutResult.statusCodeString}");
-                return;
-            }
+            await AvatarSdk.LogOutAsync();
 
             // If the listeners are not there...
             if (_didInitializeViaCache && !_didRegisterInputCallbacks)
