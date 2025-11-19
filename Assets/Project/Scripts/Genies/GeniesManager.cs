@@ -341,15 +341,6 @@ public class GeniesManager : MonoBehaviour
         }
     }
 
-    /*void SetLocalGenieOnLogInAborted()
-    {
-        // if current genie hasn't been set by user
-        if (currGenieIdx < 0)
-        {
-            SetCurrentGenieByIdx(LOCAL_GENIE_INDEX);
-        }
-    }*/
-
     public float GetMinHeightToFitInFrame(Vector3 targetPosition)
     {
         // Make a plane that is positioned at the Genie's location and
@@ -531,11 +522,9 @@ public class GeniesManager : MonoBehaviour
 
         // Get the stats of the current Genie so we can fill her shoes
         bool canCopyXform = CurrentGenie != null && CurrentGenie.IsGenieSetUp;
-        Vector3 targetPos = canCopyXform ? CurrentGenie.transform.position :
-                                IsGameReady ? GetGeniePlacementPositionInCameraFrustum():
-                                              GetHiddenPosition();    
+        Vector3 targetPos = canCopyXform ? CurrentGenie.transform.position : GetGeniePlacementPositionInCameraFrustum();
         Quaternion targetRot = canCopyXform ? CurrentGenie.transform.rotation : GetGenieLookAtCameraRotation(targetPos);
-        float targetScale = canCopyXform ? CurrentGenie.CurrScale : 1;
+        float targetScale = canCopyXform ? CurrentGenie.CurrScale : 0.5f;
         float targetHeight = canCopyXform ? CurrentGenie.CurrHeight : 0;
 
         // Get rid of it after copying its values
@@ -547,6 +536,7 @@ public class GeniesManager : MonoBehaviour
             // This will generate a "loading cloud" if the user genie needs to load, so you will 
             // have *something* in the scene while the async operation happens.
             CurrentGenie = CreateOrRecallUserGenie(targetPos, targetRot, targetScale, targetHeight);
+            UserGenie.transform.position = targetPos;
             // On the off chance it never loaded from the cloud properly...
             if (!_userGenieLoader.IsGenieLoaded || !UserGenie.IsGenieSetUp)
             {

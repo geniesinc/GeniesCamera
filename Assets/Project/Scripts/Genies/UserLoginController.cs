@@ -1,23 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Genies.Sdk;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Text.RegularExpressions;
-using System.Collections;
-using System.Threading.Tasks;
-using Genies.Avatars.Services;
-using Genies.ServiceManagement;
-using Genies.Utilities;
-using Genies.Utilities.Internal;
-using Genies.Login;
-using Genies.Login.Native;
-using Genies.Login.Otp;
-using Genies.Services.Configs;
-using TMPro;
-using System.Net.NetworkInformation;
-using Genies.Login.AuthMessages;
-using Genies.NativeAPI;
-using Genies.Sdk;
 
 namespace Genies.Components.Accounts
 {
@@ -25,14 +14,14 @@ namespace Genies.Components.Accounts
     {
         INITIAL_NULL_STATE,
         WAIT_VERIFY_CACHED_DATA,
-        GET_USER_PHONE,
-        WAIT_VERIFY_PHONE,
-        GET_USER_PIN,
-        WAIT_VERIFY_PIN,
+        GET_USER_EMAIL,
+        WAIT_VERIFY_EMAIL,
+        GET_USER_OTP,
+        WAIT_VERIFY_OTP,
         SOMETHING_WENT_WRONG,
         LOGGED_IN_STATE,
         NO_USER_ACCOUNT
-    };
+    }
 
     public sealed class UserLoginController : MonoBehaviour
     {
@@ -44,7 +33,7 @@ namespace Genies.Components.Accounts
 
         // BACKEND CONFIG
         [SerializeField] private NetworkConnectionChecker networkConnectionChecker;
-        
+
         // UI REFERENCES
         [SerializeField] private GameObject userLoginUiRoot;
         [SerializeField] private Text status;
@@ -56,62 +45,61 @@ namespace Genies.Components.Accounts
         [SerializeField] private Button skipButton;
         [SerializeField] private Text skipButtonText;
         [SerializeField] private Button backButton;
-        [SerializeField] private GameObject inputField_plusSign;
-        [SerializeField] private GameObject submitButton_getUserPhoneLabel;
-        [SerializeField] private GameObject submitButton_dynamicLabel;
         [SerializeField] private Text submitButton_dynamicLabelText;
         [SerializeField] private GameObject loadingDots;
         [SerializeField] private bool _doAutoInitialize;
 
-        private IOtpLoginFlowController _otpLoginFlowController;
         private LOGIN_STATE _currState = LOGIN_STATE.INITIAL_NULL_STATE;
         private Dictionary<LOGIN_STATE, Action> _stateToSetupFunction;
         private Dictionary<LOGIN_STATE, Action> _stateToCleanupFunction;
 
-        private bool _isLoggedIn = false;
-        public bool IsLoggedIn { get { return _isLoggedIn; } }
+        private bool _isLoggedIn;
+        public bool IsLoggedIn => _isLoggedIn;
 
-        // TODO: DO WE STILL NEED THIS?
-        private bool _didInitializeViaCache = false;
-        private bool _didRegisterInputCallbacks = false;
-        private bool _didInitialize = false;
+        private bool _didInitialize;
 
         private float _minLoginDisplayTimer = 1.5f;
-        private float _minPingDisplayTimer = 1.0f;
         private const float _spinOutAnimationTime = 0.15f;
 
-        private bool _isLoginUiOpen { get { return userLoginUiRoot.activeInHierarchy; } }
-        private string _currUserId = "";
-        public string UserId { get { return _currUserId; }}
+        private bool _isLoginUiOpen => userLoginUiRoot != null && userLoginUiRoot.activeInHierarchy;
+
+        private string _currUserId = string.Empty;
+        public string UserId => _currUserId;
 
         // Button strings
-        const string _btnText_confirmPin = "confirm pin";
-        const string _btnText_tryAgain = "try again";
-        const string _btnText_logOut = "log out";
-        const string _btnText_dismiss = "dismiss";
-        const string _btnText_cancel = "cancel";
-        const string _btnText_createAccount = "create account";
+        private const string _btnText_confirmOtp   = "confirm code";
+        private const string _btnText_tryAgain     = "try again";
+        private const string _btnText_logOut       = "log out";
+        private const string _btnText_cancel       = "cancel";
+        private const string _btnText_createAccount = "create account";
+        private const string _btnText_submitEmail  = "submit email";
 
         // Status strings
-        const string _statusText_waitVerifyCachedData = "attempting to log in with stored data...";
-        const string _statusText_getUserPhone = "please enter phone number";
+        private const string _statusText_waitVerifyCachedData = "attempting to log in with stored data...";
+        private const string _statusText_getUserEmail         = "please enter your email address";
+        private const string _statusText_invalidUserEmail     = "please enter a valid email address";
 
-        const string _statusText_invalidUserPhone =
-            "invalid phone number: expecting 11-13 digit number including country code";
+        private const string _statusText_waitVerifyEmail = "sending verification code to your email...";
+        private const string _statusText_noUserAccount =
+            "<b>no account found.</b>\nplease sign up through the 'Genies Party' app,\nor contact devrelations@genies.com";
 
-        const string _statusText_waitVerifyPhone = "pinging your Genie...";
-        const string _statusText_noUserAccount = "<b>no account found.</b>\nplease sign up through the 'Genies Party' app,\nor contact devrelations@genies.com";
-        const string _statusText_waitVerifyPin = "confirming your PIN...";
-        const string _statusText_invalidUserPin = "expecting 6 digit code";
-        const string _statusText_loggedIn = "great to see you!";
+        private const string _statusText_waitVerifyOtp = "confirming your code...";
+        private const string _statusText_invalidUserOtp = "expecting 6 digit code";
+        private const string _statusText_loggedIn = "great to see you!";
 
-        
+        // For minimum display timing of the "sending code" state
+        private float _emailRequestStartTime;
+        private const float _minEmailRequestDisplayTime = 1.0f;
 
-        void Start()
+        // ==============================================================
+        // Lifecycle
+        // ==============================================================
+
+        private void Start()
         {
             if (_doAutoInitialize)
             {
-                Initialize();       
+                Initialize();
             }
         }
 
@@ -122,38 +110,44 @@ namespace Genies.Components.Accounts
                 return;
             }
 
-            // Setup ability to transition to and from states
             InitializeUiStateMachine();
+            SubscribeAvatarSdkEvents();
 
-            // Set the initial UI state
+            // Initial UI: try cached login
             ChangeToState(LOGIN_STATE.WAIT_VERIFY_CACHED_DATA);
 
-            // Initialize
-            bool isSuccessful = await InitializeApp();
-            if (!isSuccessful)
-            {
-                Debug.LogError("UserLoginController: Initialization failed.");
-                return;
-            }
+            await AvatarSdk.InitializeAsync();
+            await AvatarSdk.TryInstantLoginAsync();
 
-            // If we can login from the cached token, do it!
-            bool didInstantLogIn = await GeniesLoginSdk.TryInstantLoginAsync();
-            if (didInstantLogIn)
+            if (AvatarSdk.IsLoggedIn)
             {
-                CompleteLoggedInState();
+                OnAvatarUserLoggedIn();
             }
             else
             {
-                ChangeToState(LOGIN_STATE.GET_USER_PHONE);
+                ChangeToState(LOGIN_STATE.GET_USER_EMAIL);
             }
 
             _didInitialize = true;
         }
 
+        private void OnEnable()
+        {
+            if (!_didInitialize)
+            {
+                return;
+            }
+
+            skipButton.onClick.RemoveAllListeners();
+            skipButton.onClick.AddListener(OnUserRequestSkip);
+
+            backButton.onClick.RemoveAllListeners();
+            backButton.onClick.AddListener(OnUserRequestBack);
+        }
+
         private void Update()
         {
-            // Ensure we display the login UI for at least N seconds
-            if (_minLoginDisplayTimer >= 0)
+            if (_minLoginDisplayTimer >= 0f)
             {
                 _minLoginDisplayTimer -= Time.deltaTime;
             }
@@ -161,45 +155,65 @@ namespace Genies.Components.Accounts
 
         private void OnDestroy()
         {
-            if (_didInitialize)
+            if (!_didInitialize)
             {
-                skipButton.onClick.RemoveAllListeners();
-                backButton.onClick.RemoveListener(OnUserRequestBack);
-
-                networkConnectionChecker.NetworkConnectionStateChanged -= OnNetworkConnectionChanged;   
+                return;
             }
+
+            skipButton.onClick.RemoveAllListeners();
+            backButton.onClick.RemoveListener(OnUserRequestBack);
+
+            networkConnectionChecker.NetworkConnectionStateChanged -= OnNetworkConnectionChanged;
+
+            UnsubscribeAvatarSdkEvents();
         }
 
-        private async Task<bool> InitializeApp()
+        // ==============================================================
+        // AvatarSdk Events
+        // ==============================================================
+
+        private void SubscribeAvatarSdkEvents()
         {
-            await AvatarSdk.InitializeAsync();
-            return true;
+            AvatarSdk.Events.UserLoggedIn += OnAvatarUserLoggedIn;
+            AvatarSdk.Events.UserLoggedOut += OnAvatarUserLoggedOut;
+
+            AvatarSdk.Events.LoginEmailOtpCodeRequestSucceeded += OnEmailCodeRequestSucceeded;
+            AvatarSdk.Events.LoginEmailOtpCodeRequestFailed += OnEmailCodeRequestFailed;
+
+            AvatarSdk.Events.LoginEmailOtpCodeSubmissionSucceeded += OnEmailCodeSubmissionSucceeded;
+            AvatarSdk.Events.LoginEmailOtpCodeSubmissionFailed += OnEmailCodeSubmissionFailed;
         }
 
-        private async void CompleteLoggedInState()
+        private void UnsubscribeAvatarSdkEvents()
         {
-            #if CREATOR_BUILD
-                userId = AppManager.Instance.UserId;
-            #else
-                _currUserId = await GeniesLoginSdk.GetUserIdAsync();
-            #endif
+            AvatarSdk.Events.UserLoggedIn -= OnAvatarUserLoggedIn;
+            AvatarSdk.Events.UserLoggedOut -= OnAvatarUserLoggedOut;
+
+            AvatarSdk.Events.LoginEmailOtpCodeRequestSucceeded -= OnEmailCodeRequestSucceeded;
+            AvatarSdk.Events.LoginEmailOtpCodeRequestFailed -= OnEmailCodeRequestFailed;
+
+            AvatarSdk.Events.LoginEmailOtpCodeSubmissionSucceeded -= OnEmailCodeSubmissionSucceeded;
+            AvatarSdk.Events.LoginEmailOtpCodeSubmissionFailed -= OnEmailCodeSubmissionFailed;
+        }
+
+        private async void OnAvatarUserLoggedIn()
+        {
+#if CREATOR_BUILD
+            _currUserId = AppManager.Instance.UserId;
+#else
+            _currUserId = await AvatarSdk.GetUserIdAsync();
+#endif
             userIdLabel.text = _currUserId;
             Debug.Log("User ID: " + _currUserId);
-
-            if (_currState == LOGIN_STATE.WAIT_VERIFY_CACHED_DATA)
-            {
-                _didInitializeViaCache = true;
-            }
 
             _isLoggedIn = true;
             OnLoginSuccessful?.Invoke();
 
-            // Update UI
-            // We are no longer a skip button, we are becoming a Close button
+            // Skip button becomes "Close"
             skipButton.onClick.RemoveListener(OnUserRequestSkip);
             skipButton.onClick.AddListener(HideLoginUI);
 
-            if (_minLoginDisplayTimer > 0)
+            if (_minLoginDisplayTimer > 0f)
             {
                 StartCoroutine(HideLoginUIAfterTime(_minLoginDisplayTimer));
             }
@@ -208,111 +222,147 @@ namespace Genies.Components.Accounts
                 HideLoginUI();
             }
 
-            // Update State
             ChangeToState(LOGIN_STATE.LOGGED_IN_STATE);
         }
 
-        private async void SubmitPhoneNumber(string phoneNumber)
+        private void OnAvatarUserLoggedOut()
         {
-            // time this process
-            float startTime = Time.realtimeSinceStartup;
+            _isLoggedIn = false;
+            _currUserId = string.Empty;
+            userIdLabel.text = string.Empty;
 
-            ChangeToState(LOGIN_STATE.WAIT_VERIFY_PHONE);
+            OnLogOutSuccessful?.Invoke();
 
-            var result = await _otpLoginFlowController.SubmitPhoneNumberAsync(phoneNumber);
-            Debug.Log($"UserLoginController: SubmitPhoneNumberAsync result: {result.StatusCodeString} {result.ErrorMessage}");
+            ChangeToState(LOGIN_STATE.GET_USER_EMAIL);
+        }
 
-            // Make sure the user has enough time to read
-            // the status message before we change it
-            float elapsedTime = Time.realtimeSinceStartup - startTime;
-            if (elapsedTime < _minPingDisplayTimer)
+        // ==============================================================
+        // Email OTP event handlers
+        // ==============================================================
+
+        private void OnEmailCodeRequestSucceeded(string email)
+        {
+            StartCoroutine(HandleEmailCodeRequestSucceededAfterDelay(email));
+        }
+
+        private IEnumerator HandleEmailCodeRequestSucceededAfterDelay(string email)
+        {
+            var elapsed = Time.realtimeSinceStartup - _emailRequestStartTime;
+            if (elapsed < _minEmailRequestDisplayTime)
             {
-                await Task.Delay((int)((_minPingDisplayTimer - elapsedTime) * 1000));
+                yield return new WaitForSeconds(_minEmailRequestDisplayTime - elapsed);
             }
 
-            // Update the UI
-            if (result.IsSuccessful)
+            loadingDots.SetActive(false);
+            ChangeToState(LOGIN_STATE.GET_USER_OTP);
+            status.text = $"a verification code was sent to {email}.";
+        }
+
+        private void OnEmailCodeRequestFailed((string email, string failReason) fail)
+        {
+            StartCoroutine(HandleEmailCodeRequestFailedAfterDelay(fail));
+        }
+
+        private IEnumerator HandleEmailCodeRequestFailedAfterDelay((string email, string failReason) fail)
+        {
+            var elapsed = Time.realtimeSinceStartup - _emailRequestStartTime;
+            if (elapsed < _minEmailRequestDisplayTime)
             {
-                ChangeToState(LOGIN_STATE.GET_USER_PIN);
+                yield return new WaitForSeconds(_minEmailRequestDisplayTime - elapsed);
             }
-            else if (result.ResponseStatusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.UserNotFound ||
-                    result.ResponseStatusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.UserNotConfirmed ||
-                    result.ResponseStatusCode == GeniesAuthInitiateOtpSignInResponse.StatusCode.SignUpFailed)
+
+            loadingDots.SetActive(false);
+
+            if (!string.IsNullOrEmpty(fail.failReason) &&
+                fail.failReason.IndexOf("not found", StringComparison.OrdinalIgnoreCase) >= 0)
             {
-                Debug.Log("UserLoginController: User not found or not confirmed, or sign up failed.");
                 ChangeToState(LOGIN_STATE.NO_USER_ACCOUNT);
+                status.text = _statusText_noUserAccount;
             }
             else
             {
-                string errorMessage = $"[ERROR {result.StatusCodeString}] Failed to submit phone number.\n{result.ErrorMessage}";
-                Debug.LogError("UserLoginController: " + errorMessage);
                 ChangeToState(LOGIN_STATE.SOMETHING_WENT_WRONG);
-                status.text = errorMessage;
+                status.text = string.IsNullOrWhiteSpace(fail.failReason)
+                    ? "could not send verification email. please try again."
+                    : fail.failReason;
             }
         }
 
-        private async void SubmitOtpCode(string code)
+        private void OnEmailCodeSubmissionSucceeded(string code)
         {
-            ChangeToState(LOGIN_STATE.WAIT_VERIFY_PIN);
-            var result = await _otpLoginFlowController.SubmitOtpCodeAsync(code);
-            if (result.IsSuccessful)
-            {
-                CompleteLoggedInState();
-            }
-            else
-            {
-                string errorMessage = $"[ERROR {result.StatusCodeString}] Failed to accept PIN.\n{result.ErrorMessage}";
-                Debug.LogError("UserLoginController: " + errorMessage);
-                ChangeToState(LOGIN_STATE.SOMETHING_WENT_WRONG);
-                status.text = errorMessage;
-            }
+            loadingDots.SetActive(false);
+            status.text = "code accepted. finalizing login...";
+            // UserLoggedIn event will finish the flow.
         }
+
+        private void OnEmailCodeSubmissionFailed((string code, string failReason) fail)
+        {
+            loadingDots.SetActive(false);
+            ChangeToState(LOGIN_STATE.SOMETHING_WENT_WRONG);
+
+            status.text = string.IsNullOrWhiteSpace(fail.failReason)
+                ? "verification failed. please try again."
+                : fail.failReason;
+        }
+
+        // ==============================================================
+        // Initialization / state machine setup
+        // ==============================================================
 
         private void InitializeUiStateMachine()
         {
-            // Ui Setup
             skipButton.onClick.AddListener(OnUserRequestSkip);
             backButton.onClick.AddListener(OnUserRequestBack);
 
-            // Simplify what they can enter
-            inputField.contentType = InputField.ContentType.IntegerNumber;
+            inputField.contentType = InputField.ContentType.Standard;
             inputField.lineType = InputField.LineType.SingleLine;
 
-            // Implement a 'no internet connection' state
             networkConnectionChecker.NetworkConnectionStateChanged += OnNetworkConnectionChanged;
 
-            // State machine setup
-            _stateToSetupFunction = new Dictionary<LOGIN_STATE, Action>()
+            _stateToSetupFunction = new Dictionary<LOGIN_STATE, Action>
             {
-                { LOGIN_STATE.INITIAL_NULL_STATE, CleanupContextualUiElements},
-                { LOGIN_STATE.WAIT_VERIFY_CACHED_DATA, SetupWaitVerifyCachedDataState },
-                { LOGIN_STATE.GET_USER_PHONE, SetupGetUserPhoneState },
-                { LOGIN_STATE.WAIT_VERIFY_PHONE, SetupWaitVerifyUserPhoneState },
-                { LOGIN_STATE.GET_USER_PIN, SetupGetUserPinState },
-                { LOGIN_STATE.WAIT_VERIFY_PIN, SetupWaitVerifyUserPinState },
-                { LOGIN_STATE.SOMETHING_WENT_WRONG, SetupSomethingWrongState },
-                { LOGIN_STATE.NO_USER_ACCOUNT, SetupNoUserAccountState },
-                { LOGIN_STATE.LOGGED_IN_STATE, SetupLoggedInState },
+                { LOGIN_STATE.INITIAL_NULL_STATE,        CleanupContextualUiElements },
+                { LOGIN_STATE.WAIT_VERIFY_CACHED_DATA,   SetupWaitVerifyCachedDataState },
+                { LOGIN_STATE.GET_USER_EMAIL,            SetupGetUserEmailState },
+                { LOGIN_STATE.WAIT_VERIFY_EMAIL,         SetupWaitVerifyEmailState },
+                { LOGIN_STATE.GET_USER_OTP,              SetupGetUserOtpState },
+                { LOGIN_STATE.WAIT_VERIFY_OTP,           SetupWaitVerifyOtpState },
+                { LOGIN_STATE.SOMETHING_WENT_WRONG,      SetupSomethingWrongState },
+                { LOGIN_STATE.NO_USER_ACCOUNT,           SetupNoUserAccountState },
+                { LOGIN_STATE.LOGGED_IN_STATE,           SetupLoggedInState }
             };
 
-            _stateToCleanupFunction = new Dictionary<LOGIN_STATE, Action>()
+            _stateToCleanupFunction = new Dictionary<LOGIN_STATE, Action>
             {
-                { LOGIN_STATE.INITIAL_NULL_STATE, CleanupContextualUiElements},
-                { LOGIN_STATE.WAIT_VERIFY_CACHED_DATA, CleanupWaitVerifyCachedDataState },
-                { LOGIN_STATE.GET_USER_PHONE, CleanupGetUserPhoneState },
-                { LOGIN_STATE.WAIT_VERIFY_PHONE, CleanupContextualUiElements },
-                { LOGIN_STATE.GET_USER_PIN, CleanupGetUserPinState },
-                { LOGIN_STATE.WAIT_VERIFY_PIN, CleanupContextualUiElements },
-                { LOGIN_STATE.SOMETHING_WENT_WRONG, CleanupSomethingWrongState },
-                { LOGIN_STATE.NO_USER_ACCOUNT, CleanupNoUserAccountState },
-                { LOGIN_STATE.LOGGED_IN_STATE, CleanupLoggedInState }
+                { LOGIN_STATE.INITIAL_NULL_STATE,        CleanupContextualUiElements },
+                { LOGIN_STATE.WAIT_VERIFY_CACHED_DATA,   CleanupWaitVerifyCachedDataState },
+                { LOGIN_STATE.GET_USER_EMAIL,            CleanupGetUserEmailState },
+                { LOGIN_STATE.WAIT_VERIFY_EMAIL,         CleanupContextualUiElements },
+                { LOGIN_STATE.GET_USER_OTP,              CleanupGetUserOtpState },
+                { LOGIN_STATE.WAIT_VERIFY_OTP,           CleanupContextualUiElements },
+                { LOGIN_STATE.SOMETHING_WENT_WRONG,      CleanupSomethingWrongState },
+                { LOGIN_STATE.NO_USER_ACCOUNT,           CleanupNoUserAccountState },
+                { LOGIN_STATE.LOGGED_IN_STATE,           CleanupLoggedInState }
             };
+        }
+
+        private void ChangeToState(LOGIN_STATE nextState)
+        {
+            if (_stateToCleanupFunction.TryGetValue(_currState, out var cleanup))
+            {
+                cleanup?.Invoke();
+            }
+
+            _currState = nextState;
+
+            if (_stateToSetupFunction.TryGetValue(_currState, out var setup))
+            {
+                setup?.Invoke();
+            }
         }
 
         private void OnNetworkConnectionChanged(NetworkConnectionState newState)
         {
-            // If you're on the login screen, and no internet connection is detected,
-            // send the user into offline mode.
             if (_isLoginUiOpen && newState == NetworkConnectionState.NotConnected)
             {
                 AbortUserLoginState();
@@ -323,110 +373,75 @@ namespace Genies.Components.Accounts
         private async void LogOutUser()
         {
             await AvatarSdk.LogOutAsync();
-
-            // If the listeners are not there...
-            if (_didInitializeViaCache && !_didRegisterInputCallbacks)
-            {
-                // See comments in Awake(). From here, we will just restart the app.
-                Debug.LogError("Warning: User has entered an unsupported UI state, so we will " +
-                               "give them the option to restart the game.");
-
-                // Restart game confirmation screen
-                ChangeToState(LOGIN_STATE.GET_USER_PHONE);
-            }
-
-            else
-            {
-                ChangeToState(LOGIN_STATE.GET_USER_PHONE);
-            }
-
-            _isLoggedIn = false;
-            userIdLabel.text = string.Empty;
-
-            OnLogOutSuccessful?.Invoke();
-        }
-
-        private void ChangeToState(LOGIN_STATE nextState)
-        {
-            // Call the clean-up process affiliated with the last state.
-            _stateToCleanupFunction[_currState]();
-            // Call the set-up process affiliated with the new state.
-            _currState = nextState;
-            _stateToSetupFunction[_currState]();
+            // OnAvatarUserLoggedOut will handle UI/state.
         }
 
         // ==============================================================
-        // STATE MACHINE SETUP AND CLEANUP
+        // STATE MACHINE SETUP / CLEANUP
         // ==============================================================
-        //
-        // This function reverts the UI to its default state
+
         private void CleanupContextualUiElements()
         {
-            // Turn off all input field related stuff
             inputField.gameObject.SetActive(false);
-            inputField_plusSign.SetActive(false);
 
-            // Turn off all submit button related stuff
             submitButton.gameObject.SetActive(false);
-            submitButton_dynamicLabel.SetActive(false);
-            submitButton_getUserPhoneLabel.SetActive(false);
-            submitButton_dynamicLabel.SetActive(false);
+            if (submitButton_dynamicLabelText != null)
+            {
+                submitButton_dynamicLabelText.gameObject.SetActive(false);
+            }
 
-            // Turn off 'waiting for user pin' stuff
             backButton.gameObject.SetActive(false);
 
-            // Hide mobile keyboard
             inputField.DeactivateInputField();
-
-            // Turn off loading dots
             loadingDots.SetActive(false);
         }
 
         private void CleanupWaitVerifyCachedDataState()
         {
             CleanupContextualUiElements();
-
             submitButton.onClick.RemoveListener(OnUserRequestResetLoginState);
         }
 
         private void SetupWaitVerifyCachedDataState()
         {
-            // TODO: This is our workaround for this state hanging if
-            // there is bad cached data here. In general, it would be better
-            // to just catch the exception and react (xr-372)
             submitButton.gameObject.SetActive(true);
-            submitButton_dynamicLabel.SetActive(true);
-            submitButton_dynamicLabelText.text = _btnText_cancel;
+
+            if (submitButton_dynamicLabelText != null)
+            {
+                submitButton_dynamicLabelText.gameObject.SetActive(true);
+                submitButton_dynamicLabelText.text = _btnText_cancel;
+            }
+
             submitButton.onClick.AddListener(OnUserRequestResetLoginState);
 
             status.text = _statusText_waitVerifyCachedData;
             loadingDots.SetActive(true);
         }
 
-        private void SetupWaitVerifyUserPhoneState()
+        private void SetupWaitVerifyEmailState()
         {
-            // let them recall the data they submit:
             inputField.gameObject.SetActive(true);
-            inputField_plusSign.SetActive(true);
-
-            status.text = _statusText_waitVerifyPhone;
+            status.text = _statusText_waitVerifyEmail;
             loadingDots.SetActive(true);
         }
 
-        private void SetupWaitVerifyUserPinState()
+        private void SetupWaitVerifyOtpState()
         {
-            // let them recall the data they submit:
             inputField.gameObject.SetActive(true);
-
-            status.text = _statusText_waitVerifyPin;
+            status.text = _statusText_waitVerifyOtp;
             loadingDots.SetActive(true);
         }
 
         private void SetupLoggedInState()
         {
             submitButton.gameObject.SetActive(true);
-            submitButton_dynamicLabelText.text = _btnText_logOut;
-            submitButton_dynamicLabel.SetActive(true);
+
+            if (submitButton_dynamicLabelText != null)
+            {
+                submitButton_dynamicLabelText.gameObject.SetActive(true);
+                submitButton_dynamicLabelText.text = _btnText_logOut;
+            }
+
             status.text = _statusText_loggedIn;
 
             submitButton.onClick.AddListener(OnUserPressedLogOutButton);
@@ -435,78 +450,81 @@ namespace Genies.Components.Accounts
         private void CleanupLoggedInState()
         {
             CleanupContextualUiElements();
-
             submitButton.onClick.RemoveListener(OnUserPressedLogOutButton);
         }
 
-        private void SetupGetUserPhoneState()
+        private void SetupGetUserEmailState()
         {
-            // Input field
             inputField.text = string.Empty;
             inputField.gameObject.SetActive(true);
-            inputField_plusSign.SetActive(true);
-            inputField.onSubmit.AddListener(OnUserSubmitPhoneNumberViaButton);
-            inputField.onValueChanged.AddListener(OnUserChangedPhoneNumber);
 
-            // Submit button
+            inputField.onSubmit.AddListener(OnUserSubmitEmailViaButton);
+            inputField.onValueChanged.AddListener(OnUserChangedEmail);
+
             submitButton.gameObject.SetActive(true);
-            submitButton_getUserPhoneLabel.SetActive(true);
-            submitButton.onClick.AddListener(OnUserSubmitPhoneNumberViaEnter);
 
-            // Status message
-            status.text = _statusText_getUserPhone;
+            if (submitButton_dynamicLabelText != null)
+            {
+                submitButton_dynamicLabelText.gameObject.SetActive(true);
+                submitButton_dynamicLabelText.text = _btnText_submitEmail;
+            }
+
+            submitButton.onClick.AddListener(OnUserSubmitEmailViaEnter);
+
+            status.text = _statusText_getUserEmail;
         }
 
-        private void CleanupGetUserPhoneState()
+        private void CleanupGetUserEmailState()
         {
-            // Turn off all UI visuals
             CleanupContextualUiElements();
 
-            // Turn off state-specific listeners
-            inputField.onValueChanged.RemoveListener(OnUserChangedPhoneNumber);
-            submitButton.onClick.RemoveListener(OnUserSubmitPhoneNumberViaEnter);
-            inputField.onSubmit.RemoveListener(OnUserSubmitPhoneNumberViaButton);
+            inputField.onValueChanged.RemoveListener(OnUserChangedEmail);
+            submitButton.onClick.RemoveListener(OnUserSubmitEmailViaEnter);
+            inputField.onSubmit.RemoveListener(OnUserSubmitEmailViaButton);
         }
 
-        private void SetupGetUserPinState()
+        private void SetupGetUserOtpState()
         {
-            // let them realize they entered the wrong phone number
             backButton.gameObject.SetActive(true);
 
             status.text = "enter confirmation code";
             inputField.text = string.Empty;
-            //inputFieldPlaceholder.text = "123456";
             inputField.gameObject.SetActive(true);
 
             submitButton.gameObject.SetActive(true);
-            submitButton_dynamicLabel.SetActive(true);
-            submitButton_dynamicLabelText.text = _btnText_confirmPin;
 
-            submitButton.onClick.AddListener(OnUserSubmitPinViaField);
-            inputField.onSubmit.AddListener(OnUserSubmitPinViaButton);
-            inputField.onValueChanged.AddListener(OnUserChangedPin);
+            if (submitButton_dynamicLabelText != null)
+            {
+                submitButton_dynamicLabelText.gameObject.SetActive(true);
+                submitButton_dynamicLabelText.text = _btnText_confirmOtp;
+            }
+
+            submitButton.onClick.AddListener(OnUserSubmitOtpViaField);
+            inputField.onSubmit.AddListener(OnUserSubmitOtpViaButton);
+            inputField.onValueChanged.AddListener(OnUserChangedOtp);
         }
 
-        private void CleanupGetUserPinState()
+        private void CleanupGetUserOtpState()
         {
-            // Turn off all UI visuals
             CleanupContextualUiElements();
 
-            // Turn off state-specific listeners
-            inputField.onValueChanged.RemoveListener(OnUserChangedPin);
-            submitButton.onClick.RemoveListener(OnUserSubmitPinViaField);
-            inputField.onSubmit.RemoveListener(OnUserSubmitPinViaButton);
+            inputField.onValueChanged.RemoveListener(OnUserChangedOtp);
+            submitButton.onClick.RemoveListener(OnUserSubmitOtpViaField);
+            inputField.onSubmit.RemoveListener(OnUserSubmitOtpViaButton);
         }
 
         private void SetupNoUserAccountState()
         {
-            // Create account button
             submitButton.gameObject.SetActive(true);
-            submitButton_dynamicLabel.SetActive(true);
-            submitButton_dynamicLabelText.text = _btnText_createAccount;
+
+            if (submitButton_dynamicLabelText != null)
+            {
+                submitButton_dynamicLabelText.gameObject.SetActive(true);
+                submitButton_dynamicLabelText.text = _btnText_createAccount;
+            }
+
             submitButton.onClick.AddListener(OnUserCreateAccountButtonPressed);
 
-            // Use without account button
             useWithoutAccountButton.gameObject.SetActive(true);
             useWithoutAccountButton.onClick.AddListener(OnUserRequestSkip);
 
@@ -515,11 +533,9 @@ namespace Genies.Components.Accounts
 
         private void CleanupNoUserAccountState()
         {
-            // Turn off all UI visuals
             CleanupContextualUiElements();
-            // Turn off state-specific items
+
             useWithoutAccountButton.gameObject.SetActive(false);
-            // State specific listeners
             useWithoutAccountButton.onClick.RemoveListener(OnUserRequestSkip);
             submitButton.onClick.RemoveListener(OnUserCreateAccountButtonPressed);
         }
@@ -527,24 +543,26 @@ namespace Genies.Components.Accounts
         private void SetupSomethingWrongState()
         {
             submitButton.gameObject.SetActive(true);
-            submitButton_dynamicLabelText.text = _btnText_tryAgain;
-            submitButton_dynamicLabel.SetActive(true);
+
+            if (submitButton_dynamicLabelText != null)
+            {
+                submitButton_dynamicLabelText.gameObject.SetActive(true);
+                submitButton_dynamicLabelText.text = _btnText_tryAgain;
+            }
 
             submitButton.onClick.AddListener(OnUserTryAgain);
         }
 
         private void CleanupSomethingWrongState()
         {
-            // Turn off all UI visuals
             CleanupContextualUiElements();
-
-            // Turn off state-specific listeners
             submitButton.onClick.RemoveListener(OnUserTryAgain);
         }
 
         // ==============================================================
-        // IN RESPONSE TO UI BUTTON PRESS & TYPING
+        // UI EVENTS
         // ==============================================================
+
         private void OnUserRequestSkip()
         {
             AbortUserLoginState();
@@ -556,66 +574,72 @@ namespace Genies.Components.Accounts
             LogOutUser();
         }
 
-        // The back button is only shown during the PIN confirmation state,
-        // so the only place to go is back to the initial phone number state.
         private void OnUserRequestBack()
         {
-            ChangeToState(LOGIN_STATE.GET_USER_PHONE);
+            ChangeToState(LOGIN_STATE.GET_USER_EMAIL);
         }
 
         private void OnUserCreateAccountButtonPressed()
         {
-            Debug.Log("Launch Genies Party app to create account");
+            Application.OpenURL(AvatarSdk.UrlGeniesHubSignUp);
         }
 
-        private void OnUserSubmitPhoneNumberViaEnter()
+        private void OnUserSubmitEmailViaEnter()
         {
-            OnUserSubmitPhoneNumberViaButton(inputField.text);
+            OnUserSubmitEmailViaButton(inputField.text);
         }
 
-        private void OnUserSubmitPhoneNumberViaButton(string userString)
+        private async void OnUserSubmitEmailViaButton(string userString)
         {
-            // clean up their string by stripping any nonsense and attempting
-            // to fixg common mistakes such as missing country code
-            string cleanString = GetCleanPhoneNumber(userString);
+            var email = (userString ?? string.Empty).Trim();
 
-            // show the user what we will submit (note: plus sign is already perma-displayed)
-            inputField.text = cleanString.Replace("+", "");
-
-            // try to input
-            if (!PhoneNumberValidator.IsPhoneNumberValid(cleanString))
+            if (!IsEmailValid(email))
             {
-                // If they typo, we still stay on this screen, so no need to cleanup anything:
-                status.text = _statusText_invalidUserPhone;
+                status.text = _statusText_invalidUserEmail;
+                return;
             }
-            else
+
+            Debug.Log("UserLoginController submitting email: " + email);
+
+            ChangeToState(LOGIN_STATE.WAIT_VERIFY_EMAIL);
+            _emailRequestStartTime = Time.realtimeSinceStartup;
+
+            await AvatarSdk.StartLoginEmailOtpAsync(email);
+            // Events drive next transitions.
+        }
+
+        private async void OnUserSubmitOtpViaField()
+        {
+            await SubmitOtpCodeAsync(inputField.text);
+        }
+
+        private async void OnUserSubmitOtpViaButton(string arg)
+        {
+            await SubmitOtpCodeAsync(arg);
+        }
+
+        private async Task SubmitOtpCodeAsync(string code)
+        {
+            var trimmed = (code ?? string.Empty).Trim();
+
+            if (!Regex.IsMatch(trimmed, @"^\d{6}$"))
             {
-                Debug.Log("UserLoginController submitting number: " + cleanString);
-
-                // Setup entire login system
-
-                _otpLoginFlowController?.Dispose();
-                _otpLoginFlowController = GeniesLoginSdk.StartOtpLogin();
-                SubmitPhoneNumber(cleanString);
+                status.text = _statusText_invalidUserOtp;
+                return;
             }
-        }        
 
-        private void OnUserSubmitPinViaField()
-        {
-            SubmitOtpCode(inputField.text);
+            ChangeToState(LOGIN_STATE.WAIT_VERIFY_OTP);
+            await AvatarSdk.SubmitEmailOtpCodeAsync(trimmed);
+            // Events handle success/failure.
         }
 
-        private void OnUserSubmitPinViaButton(string arg)
+        private void OnUserChangedEmail(string text)
         {
-            // change to wait
-            SubmitOtpCode(arg);
-        }
+            var email = (text ?? string.Empty).Trim();
 
-        private void OnUserChangedPhoneNumber(string text)
-        {
-            if (!PhoneNumberValidator.IsPhoneNumberValid(GetCleanPhoneNumber(text)))
+            if (!IsEmailValid(email))
             {
-                status.text = _statusText_invalidUserPhone;
+                status.text = _statusText_invalidUserEmail;
             }
             else
             {
@@ -623,23 +647,21 @@ namespace Genies.Components.Accounts
             }
         }
 
-        private void OnUserChangedPin(string text)
+        private void OnUserChangedOtp(string text)
         {
-            if (Regex.IsMatch(text, @"^\d{6}$"))
+            if (Regex.IsMatch(text ?? string.Empty, @"^\d{6}$"))
             {
                 status.text = string.Empty;
             }
             else
             {
-                status.text = _statusText_invalidUserPin;
+                status.text = _statusText_invalidUserOtp;
             }
         }
 
         private void OnUserTryAgain()
         {
-            // Reset the new state to Getting the user's phone number. Map to base class's
-            // more limited vocabulary to achieve this:
-            ChangeToState(LOGIN_STATE.GET_USER_PHONE);
+            ChangeToState(LOGIN_STATE.GET_USER_EMAIL);
         }
 
         private void OnUserPressedLogOutButton()
@@ -648,8 +670,9 @@ namespace Genies.Components.Accounts
         }
 
         // ==============================================================
-        /// UI HELPER FUNCTIONS
+        // UI HELPERS
         // ==============================================================
+
         public void ShowLoginUI()
         {
             StartCoroutine(SpinLoginUiOpen());
@@ -660,29 +683,25 @@ namespace Genies.Components.Accounts
             StartCoroutine(SpinLoginUiClose());
 
             OnLoginUiClosed?.Invoke();
-
-            // We only want it to say "skip" the first time.
-            // From there, it should say "close".
             skipButtonText.text = "close";
         }
 
         private void AbortUserLoginState()
         {
-            ChangeToState(LOGIN_STATE.GET_USER_PHONE);
-
+            ChangeToState(LOGIN_STATE.GET_USER_EMAIL);
             OnLoginStateAborted?.Invoke();
         }
 
         private IEnumerator SpinLoginUiOpen()
         {
-            userLoginUiRoot.transform.localRotation = Quaternion.Euler(0, 90, 0);
+            userLoginUiRoot.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             userLoginUiRoot.SetActive(true);
 
-            float currTime = 0f;
+            var currTime = 0f;
             while (currTime <= _spinOutAnimationTime)
             {
-                float spinVal = Mathf.Lerp(180, 90, currTime / _spinOutAnimationTime);
-                userLoginUiRoot.transform.localRotation = Quaternion.Euler(0, spinVal, 0);
+                var spinVal = Mathf.Lerp(180f, 90f, currTime / _spinOutAnimationTime);
+                userLoginUiRoot.transform.localRotation = Quaternion.Euler(0f, spinVal, 0f);
                 currTime += Time.deltaTime;
                 yield return null;
             }
@@ -692,17 +711,16 @@ namespace Genies.Components.Accounts
 
         private IEnumerator SpinLoginUiClose()
         {
-            float currTime = 0f;
+            var currTime = 0f;
             while (currTime <= _spinOutAnimationTime)
             {
-                float spinVal = Mathf.Lerp(0, 90, currTime / _spinOutAnimationTime);
-                userLoginUiRoot.transform.localRotation = Quaternion.Euler(0, spinVal, 0);
+                var spinVal = Mathf.Lerp(0f, 90f, currTime / _spinOutAnimationTime);
+                userLoginUiRoot.transform.localRotation = Quaternion.Euler(0f, spinVal, 0f);
                 currTime += Time.deltaTime;
                 yield return null;
             }
 
             userLoginUiRoot.transform.localRotation = Quaternion.identity;
-
             userLoginUiRoot.SetActive(false);
         }
 
@@ -715,27 +733,11 @@ namespace Genies.Components.Accounts
         // ==============================================================
         // GENERIC UTILS
         // ==============================================================
-        private string GetCleanPhoneNumber(string userString)
+
+        private static bool IsEmailValid(string email)
         {
-            // they put random stuff in? shouldn't be possible due to our
-            // keyboard type but whatever.
-            string cleanString = Regex.Replace(userString, @"[^\d]", "");
-
-            // they forgot a country code and are probably american?
-            if (cleanString.Length == 10)
-            {
-                cleanString = $"1{cleanString}";
-            }
-
-            // we stripped the plus sign out in the first sanity-check,
-            // and also it shouldn't be possible due to our keyboard type,
-            // but just in case:
-            if (!cleanString.StartsWith("+"))
-            {
-                cleanString = $"+{cleanString}";
-            }
-
-            return cleanString;
+            // Simple heuristic; replace with more robust validation if needed.
+            return !string.IsNullOrWhiteSpace(email) && email.Contains("@");
         }
     }
 }
