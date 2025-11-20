@@ -269,7 +269,7 @@ namespace Genies.Components.Accounts
             loadingDots.SetActive(false);
 
             if (!string.IsNullOrEmpty(fail.failReason) &&
-                fail.failReason.IndexOf("not found", StringComparison.OrdinalIgnoreCase) >= 0)
+                fail.failReason.IndexOf("failed to get user by email", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 ChangeToState(LOGIN_STATE.NO_USER_ACCOUNT);
                 status.text = _statusText_noUserAccount;
@@ -577,6 +577,7 @@ namespace Genies.Components.Accounts
         private void OnUserCreateAccountButtonPressed()
         {
             Application.OpenURL(AvatarSdk.UrlGeniesHubSignUp);
+            ChangeToState(LOGIN_STATE.GET_USER_EMAIL);
         }
 
         private void OnUserSubmitEmailViaEnter()
