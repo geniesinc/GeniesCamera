@@ -117,17 +117,13 @@ namespace Genies.Components.Accounts
             ChangeToState(LOGIN_STATE.WAIT_VERIFY_CACHED_DATA);
 
             await AvatarSdk.InitializeAsync();
-            await AvatarSdk.TryInstantLoginAsync();
+            var instantLoginResult = await AvatarSdk.TryInstantLoginAsync();
 
-            if (AvatarSdk.IsLoggedIn)
-            {
-                OnAvatarUserLoggedIn();
-            }
-            else
+            if (!instantLoginResult.isLoggedIn)
             {
                 ChangeToState(LOGIN_STATE.GET_USER_EMAIL);
             }
-
+        
             _didInitialize = true;
         }
 
@@ -204,7 +200,6 @@ namespace Genies.Components.Accounts
             _currUserId = await AvatarSdk.GetUserIdAsync();
 #endif
             userIdLabel.text = _currUserId;
-            Debug.Log("User ID: " + _currUserId);
 
             _isLoggedIn = true;
             OnLoginSuccessful?.Invoke();

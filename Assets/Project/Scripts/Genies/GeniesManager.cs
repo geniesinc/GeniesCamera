@@ -8,6 +8,7 @@ using System.Net.NetworkInformation;
 using System;
 using UnityEditor;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 
 public class GeniesManager : MonoBehaviour
 {
@@ -104,7 +105,6 @@ public class GeniesManager : MonoBehaviour
 
         // Subscribe to callbacks
         _cameraManager.OnActiveCameraTypeChanged += PlaceGenieInNewCameraView;
-        _appManager.OnGameReady += ShowGenieOnGameReady;
 
         // For animating the genies face
         _facesManager.OnARFaceUpdated += FacesManager_OnARFaceUpdated;
@@ -265,7 +265,6 @@ public class GeniesManager : MonoBehaviour
         if (_didInitialize)
         {
             _cameraManager.OnActiveCameraTypeChanged -= PlaceGenieInNewCameraView;
-            _appManager.OnGameReady -= ShowGenieOnGameReady;
 
             _facesManager.OnARFaceUpdated -= FacesManager_OnARFaceUpdated;
 
@@ -332,12 +331,15 @@ public class GeniesManager : MonoBehaviour
         }
     }
 
-    public void SetUserGenieOnLogIn()
+    public async void SetUserGenieOnLogIn()
     {
+        // We may have logged in but lets wait until we're ready to actually do anything
+        await new WaitUntil(()=> IsGameReady);
+        
         // if current genie hasn't been set by user
         if(_currGenieIdx < 0)
         {
-            _ = SetCurrentGenieByIdx(USER_GENIE_INDEX);
+            await SetCurrentGenieByIdx(USER_GENIE_INDEX);
         }
     }
 
