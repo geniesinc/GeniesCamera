@@ -354,23 +354,15 @@ public class GenieController : MonoBehaviour
     public void SetupUserGeniePreload()
     {
         // Sanity check
-        if (_preloadFxInstance != null)
+        if (_preloadFxInstance == null)
         {
-            Debug.LogError("You're trying to make preloadFx but they already exist. App state error?");
-            return;
+            _preloadFxInstance = Instantiate(_preloadFxPrefab);
         }
 
         // Create a "Loading..." graphic and place it where the genie goes.
-        _preloadFxInstance = Instantiate(_preloadFxPrefab);
         // @GenieController: To know where it goes and how big it should be
         // @InputManager: To know if we are in screen space
         _preloadFxInstance.Initialize(this, _cameraManager);
-
-        // Do we need to hide the fx while we look for the floor?
-        if (!_geniesManager.IsGameReady)
-        {
-            _preloadFxInstance.SetFxVisibility(false);
-        }
     }
 
     private void FitGenieInFrame()

@@ -8,6 +8,7 @@ using System.Net.NetworkInformation;
 using System;
 using UnityEditor;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 
 public class GeniesManager : MonoBehaviour
 {
@@ -104,7 +105,6 @@ public class GeniesManager : MonoBehaviour
 
         // Subscribe to callbacks
         _cameraManager.OnActiveCameraTypeChanged += PlaceGenieInNewCameraView;
-        _appManager.OnGameReady += ShowGenieOnGameReady;
 
         // For animating the genies face
         _facesManager.OnARFaceUpdated += FacesManager_OnARFaceUpdated;
@@ -265,7 +265,6 @@ public class GeniesManager : MonoBehaviour
         if (_didInitialize)
         {
             _cameraManager.OnActiveCameraTypeChanged -= PlaceGenieInNewCameraView;
-            _appManager.OnGameReady -= ShowGenieOnGameReady;
 
             _facesManager.OnARFaceUpdated -= FacesManager_OnARFaceUpdated;
 
@@ -332,23 +331,17 @@ public class GeniesManager : MonoBehaviour
         }
     }
 
-    public void SetUserGenieOnLogIn()
+    public async void SetUserGenieOnLogIn()
     {
+        // We may have logged in but lets wait until we're ready to actually do anything
+        await new WaitUntil(()=> IsGameReady);
+        
         // if current genie hasn't been set by user
         if(_currGenieIdx < 0)
         {
-            _ = SetCurrentGenieByIdx(USER_GENIE_INDEX);
+            await SetCurrentGenieByIdx(USER_GENIE_INDEX);
         }
     }
-
-    /*void SetLocalGenieOnLogInAborted()
-    {
-        // if current genie hasn't been set by user
-        if (currGenieIdx < 0)
-        {
-            SetCurrentGenieByIdx(LOCAL_GENIE_INDEX);
-        }
-    }*/
 
     public float GetMinHeightToFitInFrame(Vector3 targetPosition)
     {
@@ -531,11 +524,9 @@ public class GeniesManager : MonoBehaviour
 
         // Get the stats of the current Genie so we can fill her shoes
         bool canCopyXform = CurrentGenie != null && CurrentGenie.IsGenieSetUp;
-        Vector3 targetPos = canCopyXform ? CurrentGenie.transform.position :
-                                IsGameReady ? GetGeniePlacementPositionInCameraFrustum():
-                                              GetHiddenPosition();    
+        Vector3 targetPos = canCopyXform ? CurrentGenie.transform.position : GetGeniePlacementPositionInCameraFrustum();
         Quaternion targetRot = canCopyXform ? CurrentGenie.transform.rotation : GetGenieLookAtCameraRotation(targetPos);
-        float targetScale = canCopyXform ? CurrentGenie.CurrScale : 1;
+        float targetScale = canCopyXform ? CurrentGenie.CurrScale : 0.5f;
         float targetHeight = canCopyXform ? CurrentGenie.CurrHeight : 0;
 
         // Get rid of it after copying its values
@@ -547,12 +538,11 @@ public class GeniesManager : MonoBehaviour
             // This will generate a "loading cloud" if the user genie needs to load, so you will 
             // have *something* in the scene while the async operation happens.
             CurrentGenie = CreateOrRecallUserGenie(targetPos, targetRot, targetScale, targetHeight);
+            UserGenie.transform.position = targetPos;
             // On the off chance it never loaded from the cloud properly...
             if (!_userGenieLoader.IsGenieLoaded || !UserGenie.IsGenieSetUp)
             {
                 await _userGenieLoader.LoadUserGenieAsync(UserGenie.transform);
-                // Remove any extra GeniesParty components
-                _userGenieLoader.StripDefaultComponents();
                 // Add any specific GeniesCamera components
                 UserGenie.SetupGenie();
             }
