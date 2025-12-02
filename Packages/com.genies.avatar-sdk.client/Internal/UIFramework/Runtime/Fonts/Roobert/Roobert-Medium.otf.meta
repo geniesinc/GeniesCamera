@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 50ed9430f869d774fa59f160730a8812
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Roobert TRIAL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 10768dc08584ac94eb575e7e5de1438a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,26 @@
+{
+    "name": "Genies.Wearables",
+    "rootNamespace": "Genies.Wearables",
+    "references": [
+        "GUID:894b9fdc44d254ebe9461dc11ca003f2",
+        "GUID:3a3bc432b8c514aa4aef97b11aa3303b",
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516",
+        "GUID:eecbffeb817734ff3ad1f1c5ac45ed0c",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:f0a1238b528228148b0454c1ee940212",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cc45db82de60741e2905beea4bffb817"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfdfc315b7e4c528a0699606aee8ae9, type: 3}
+  m_Name: MaterialSettings
+  m_EditorClassIdentifier: 
+  materialModels:
+  - models:
+    - unity/Universal Render Pipeline/Lit
+    material: {fileID: 2100000, guid: 4800e8874415d8a49a12d4e0dbc26929, type: 2}
+  - models:
+    - unity/Shader Graphs/MegaSkin
+    - unity/Shader Graphs/MegaSkin_P
+    material: {fileID: 2100000, guid: cc612b99f95992440b7cf5d1350097f0, type: 2}
+  - models:
+    - unity/Shader Graphs/MegaEyes
+    - unity/Shader Graphs/MegaEyes_P
+    material: {fileID: 2100000, guid: 85beec27a80c3af40a27835adf465373, type: 2}
+  - models:
+    - unity/Shader Graphs/MegaHair
+    - unity/Shader Graphs/MegaHair_P
+    material: {fileID: 2100000, guid: 23db34c501c2fc242b6264b22e3a3d16, type: 2}
+  - models:
+    - unity/Shader Graphs/MegaFlair
+    material: {fileID: 2100000, guid: 6c6ed9adf429f814eb23657ba2b80f27, type: 2}
+  - models:
+    - debug/rest-cage
+    material: {fileID: 2100000, guid: 46ec6e6c701bd4340a481ad375c24fef, type: 2}
+  - models:
+    - debug/deformed
+    material: {fileID: 2100000, guid: 8e28d6ce4a2e42544b1d1213d19b9d80, type: 2}
+  - models:
+    - debug/non-deformed
+    material: {fileID: 2100000, guid: 718153970cac19b45a16b1b4203688a4, type: 2}
+  includeMaterials:
+  - {fileID: 2100000, guid: 453862c674b38c94891e7c927853fdf9, type: 2}
+  - {fileID: 2100000, guid: bca34fca830cf3940a27c46c4b4d6c8c, type: 2}
+  includeShaders: []

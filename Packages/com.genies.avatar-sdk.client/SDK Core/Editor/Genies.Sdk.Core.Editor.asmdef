@@ -1,0 +1,19 @@
+{
+    "name": "Genies.Sdk.Core.Editor",
+    "rootNamespace": "Genies.Sdk.Core.Editor",
+    "references": [
+        "GUID:54d82f9c1bfda44e48ddbc01235cb1f7",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

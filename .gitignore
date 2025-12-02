@@ -48,3 +48,4 @@ sysinfo.txt
 .DS_Store
 mono_crash.*
 aws_sdk.*.log
+cache

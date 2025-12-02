@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2246292368917208213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5611ea6d9948f290444d841345c93f, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.OutfitCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 1
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _cellView: {fileID: 1225775665669391065, guid: 566f77f1b79593b41ac13e2cac9fddba, type: 3}
+  _secondaryDataSource: {fileID: 0}
+  _subcategory: 7
+  _virtualCamera: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: CropTops
+  m_EditorClassIdentifier: 
+  breadcrumbName: Crop Tops
+  _customizationController: {fileID: -2246292368917208213}
+  _viewConfig:
+    navBarButtonName: Crop Tops
+    icon: {fileID: 21300000, guid: 866c994404b2b417fb9ea0de73be5692, type: 3}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 248
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 0
+    headerText: 
+    actionBarFlags: 24

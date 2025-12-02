@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.genies.avatar-sdk.client": "0.12.1",
     "com.judahperez.hsvcolorpicker": "3.3.0",
     "com.nobi.roundedcorners": "3.4.1",
     "com.unity.2d.sprite": "1.0.0",

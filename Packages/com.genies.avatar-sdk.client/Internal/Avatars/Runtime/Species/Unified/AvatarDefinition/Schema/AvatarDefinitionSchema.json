@@ -1,0 +1,86 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+	"$id": "https://genies.com/schema/avatardefinition/1-1-0/avatardefinition.json",
+	"title": "Avatar Definition Schema",
+	"description": "Serialized Avatar traits and equipped wearables",
+	"type": "object",
+	"properties": {
+		"JsonVersion": {
+			"description": "Version of avatar definition, in MODEL-REVISION-ADDITION format. Should match schema version",
+			"type": "string"
+		},
+		"Species": {
+			"description": "Avatar type - currently UMA Race build and generation (ie. UnifiedGenie_gen1)",
+			"type": "string"
+		},
+		"Outfits": {
+			"description": "List of outfits, first one is what is currently equipped",
+			"type": "array",
+			"items": {
+				"description": "A single Outfit, consisting of a list of wearables, one per category",
+				"type": "array",
+				"items": {
+					"description": "A single Wearable or Equippable (Addressables path)",
+					"type": "string"
+				}
+			}
+		},
+		"DNA": {
+			"type": "object",
+			"patternProperties": {
+				"^male$": {
+					"type": "number"
+				},
+				"^female$": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": true
+		},
+		"HairMaterial": {
+			"description": "Name of Hair presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+			"type": "string"
+		},
+		"SkinMaterial": {
+			"description": "Name of Skin presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+			"type": "string"
+		},
+		"EyeMaterial": {
+			"description": "Name of Eye presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+			"type": "string"
+		},
+       "FacialhairMaterial": {
+			"description": "Name of Facial hair presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+			"type": "string"
+		},
+      "EyebrowFlair": {
+        "description": "Name of Eyebrow Flair presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+        "type": "string"
+      },
+      "EyebrowColorPreset": {
+        "description": "Name of Eyebrow Color presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+        "type": "string"
+      },
+      "EyelashFlair": {
+        "description": "Name of Eyelash Flair presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+        "type": "string"
+      },
+      "EyelashColorPreset": {
+        "description": "Name of Eyelash Color presets (or parameter settings) container corresponding to a particular material. Overrides default parameters",
+        "type": "string"
+      },
+		"AvatarFeatures": {
+			"type": "object",
+			"patternProperties": {
+				"^DecoratedSkin$": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": true
+		}
+	},
+	"required": [
+		"JsonVersion",
+		"Species"
+	]
+}

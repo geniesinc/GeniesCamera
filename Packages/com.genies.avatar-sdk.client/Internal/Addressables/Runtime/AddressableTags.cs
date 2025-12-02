@@ -1,0 +1,33 @@
+﻿namespace Genies.Addressables
+{
+    public enum AddressableTags
+    {
+        animation,
+        basictemplate,
+        decal,
+        dolltemplate,
+        elementcontainer,
+        flair,
+        gear,
+        geartemplate,
+        generativetemplate,
+        looks,
+        patch,
+        pattern,
+        scene,
+        skin,
+        shaders,
+        tattoo,
+        things,
+        thingstemplate,
+        thumbnail,
+        highthumbnail,
+        mediumthumbnail,
+        ugctemplate,
+        ugcwpattern,
+        unified,
+        wardrobe,
+        subspecies,
+        modellibrary,
+    }
+}

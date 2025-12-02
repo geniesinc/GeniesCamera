@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: BodyCustomization
+  m_EditorClassIdentifier: 
+  breadcrumbName: BodyCustomization
+  _customizationController: {fileID: 6003259125709059299}
+  _viewConfig:
+    navBarButtonName: BodyCustomization
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 0
+    customizerViewFlags: 7
+    customizationEditorHeight: 248
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 1
+    headerText: Customizing Body Shape
+    actionBarFlags: 24
+--- !u!114 &6003259125709059299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79322900a12849b43bfc1eb2c7d8b483, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.BodyShapeCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 0
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}

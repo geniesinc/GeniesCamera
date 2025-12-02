@@ -1,0 +1,20 @@
+{
+    "name": "Genies.Dynamics.Editor",
+    "rootNamespace": "Genies.Dynamics.Editor",
+    "references": [
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343",
+        "GUID:b28f5741ad3bd67409131517d8c1da8d",
+        "GUID:f4cb6d2c24715bd4884385645277f011"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

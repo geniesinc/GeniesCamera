@@ -1,0 +1,20 @@
+{
+    "name": "Genies.CreatorTools.utils",
+    "rootNamespace": "Genies.CreatorTools.utils",
+    "references": [
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:f4cb6d2c24715bd4884385645277f011",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

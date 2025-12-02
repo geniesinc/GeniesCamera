@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: UgcRandomizer
+  m_EditorClassIdentifier: 
+  breadcrumbName: Randomizer
+  _customizationController: {fileID: 6834572729188408406}
+  _viewConfig:
+    navBarButtonName: 
+    icon: {fileID: 21300000, guid: 5eb8c85706ace4e6486ffa6efaf19354, type: 3}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: 14
+    customizationEditorHeight: 60
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0.09411765, g: 0.08627451, b: 0.09019608, a: 1}
+    actionBarFlags: 144
+--- !u!114 &6834572729188408406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c40e1b7d06e3fe4e8193181feda48c0, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.UgcRandomizerCustomizationController)
+  m_EditorClassIdentifier: 
+  _randomizeButtonPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/UGC/RandomizeButton.prefab
+  _editButtonPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/UGC/EditButton.prefab

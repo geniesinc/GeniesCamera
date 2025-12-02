@@ -1,0 +1,21 @@
+{
+    "name": "Genies.Inventory.UIData.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fe567e5b0ce234f6ab770c87ef25bfd2",
+        "GUID:b8e3962c31543465693c9a09a2a94ec0",
+        "GUID:43271491f95454cc4be4b9839d8b8fca",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:6b9b8d0ad6af44db38657f0bf2422a79",
+        "GUID:03746d41388b5432d8f92249cbbd553d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Genies.Inventory.UIData",
+    "rootNamespace": "Genies.Inventory.UIData",
+    "references": [
+        "GUID:03746d41388b5432d8f92249cbbd553d",
+        "GUID:43271491f95454cc4be4b9839d8b8fca",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:b8e3962c31543465693c9a09a2a94ec0",
+        "GUID:db0ee19fa8023cc43b7e72b68d0ab85f",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:597bf3ce49e48486289d72b74155809c",
+        "GUID:6b9b8d0ad6af44db38657f0bf2422a79"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

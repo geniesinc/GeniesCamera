@@ -1,0 +1,29 @@
+{
+    "name": "Genies.Looks",
+    "rootNamespace": "Genies.Looks",
+    "references": [
+        "GUID:fbb9a815e26a14bf6bc43a0ae14a4f77",
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343",
+        "GUID:330ba3cece64d49d9a21da0c97f9a9cd",
+        "GUID:308234f6ca2189c469fb7364db9f0bd8",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:3a3bc432b8c514aa4aef97b11aa3303b",
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516",
+        "GUID:eecbffeb817734ff3ad1f1c5ac45ed0c",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:20c046ccbf9d4c74bb47a4796aee848e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

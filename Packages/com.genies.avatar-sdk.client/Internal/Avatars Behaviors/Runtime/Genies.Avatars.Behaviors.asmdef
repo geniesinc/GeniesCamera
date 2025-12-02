@@ -1,0 +1,23 @@
+{
+    "name": "Genies.Avatars.Behaviors",
+    "rootNamespace": "Genies.Avatars.Behaviors",
+    "references": [
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343",
+        "GUID:8e7278e29dbdb420880a26597e9aadce",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:308234f6ca2189c469fb7364db9f0bd8",
+        "GUID:5258468688d02433f9fc53ddfe739a67",
+        "GUID:20c046ccbf9d4c74bb47a4796aee848e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

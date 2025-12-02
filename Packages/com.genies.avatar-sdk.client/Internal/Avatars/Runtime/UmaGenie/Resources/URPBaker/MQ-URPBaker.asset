@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e52b0e3e7c44769a31416d606a4b18, type: 3}
+  m_Name: MQ-URPBaker
+  m_EditorClassIdentifier: 
+  converters:
+  - {fileID: 11400000, guid: 73e0b5541b86f5249aa27c14b4c4b775, type: 2}
+  - {fileID: 11400000, guid: 945c7cf02ed38b043bb040155c15bf19, type: 2}
+  - {fileID: 11400000, guid: c8ba6b73059eeb14ba42b1f178e34f58, type: 2}
+  - {fileID: 11400000, guid: 88cf0174684d58a499391ec32a86f1d8, type: 2}
+  - {fileID: 11400000, guid: b4fe7fb897785ee48aa46eeaedf53795, type: 2}
+  - {fileID: 11400000, guid: 7935d9e2c48881c48ba1398bf99d55c5, type: 2}
+  conversionNotSupportedBehaviour: 0
+  materialCopier: {fileID: 11400000, guid: 11ffd38025c6ea649ac75484c66a2c2b, type: 2}
+  cacheConversions: 1

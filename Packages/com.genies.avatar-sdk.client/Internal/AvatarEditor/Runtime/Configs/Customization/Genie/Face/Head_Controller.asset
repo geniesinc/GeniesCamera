@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8be649cf1ce249f2b4995be2b9e8b36, type: 3}
+  m_Name: Head_Controller
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 1
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _breadcrumbName: Edit Face
+  _viewConfig:
+    navBarButtonName: Face
+    icon: {fileID: 21300000, guid: 3bddb03d3ac204ccc84f6f666bc704d3, type: 3}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 1
+    customizerViewFlags: 7
+    customizationEditorHeight: 112
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 0
+    headerText: 
+    actionBarFlags: 24
+  _registeredNodesPerCategory:
+    pairs:
+    - key: 4
+      value: {fileID: 11400000, guid: 8488aea95757f4887b10f88c71af21c1, type: 2}
+    - key: 5
+      value: {fileID: 11400000, guid: 19035c0bb1ef3441dbca0b99b4ff1f72, type: 2}
+    - key: 3
+      value: {fileID: 11400000, guid: 368ff0ea97785482ea39bc4937f0ae07, type: 2}
+    - key: 1
+      value: {fileID: 11400000, guid: 328c860817af4442698ea702012178d0, type: 2}
+    - key: 2
+      value: {fileID: 11400000, guid: 258f09ba9721d4c25947ca914e139c99, type: 2}
+    error: 0

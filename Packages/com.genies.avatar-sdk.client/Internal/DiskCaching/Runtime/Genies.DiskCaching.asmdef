@@ -1,0 +1,16 @@
+{
+    "name": "Genies.DiskCaching",
+    "rootNamespace": "Genies.DiskCaching",
+    "references": [
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

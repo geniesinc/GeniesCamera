@@ -1,0 +1,32 @@
+{
+    "name": "Genies.Avatars",
+    "rootNamespace": "Genies.Avatars",
+    "references": [
+        "GUID:b8e3962c31543465693c9a09a2a94ec0",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:951d730e5f4714cce97035e74fddf394",
+        "GUID:8e7278e29dbdb420880a26597e9aadce",
+        "GUID:03746d41388b5432d8f92249cbbd553d",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:bb5a983e77d4724488ef865fdc5da2d5",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:40f39bff7bc9be34182ebe488fcf8228",
+        "GUID:f4cb6d2c24715bd4884385645277f011",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:7f7d1af65c2641843945d409d28f2e20",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:18d18f811ba286c49814567a3cfba688",
+        "GUID:8798b5f2715944c51b4a67f10a783273",
+        "GUID:597bf3ce49e48486289d72b74155809c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,1008 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2966e7a5340c4b36a73e74626660c9c8, type: 3}
+  m_Name: ChildJoint-BodyConfig
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: Weight
+    joints:
+    - name: HipsBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.66, y: 1, z: 0.8}
+      maxScale: {x: 1.5, y: 1, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.66, y: 1, z: 0.8}
+      maxScale: {x: 1.5, y: 1, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.66, y: 1, z: 0.8}
+      maxScale: {x: 1.5, y: 1, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: ChestBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.66, y: 1, z: 0.8}
+      maxScale: {x: 1.5, y: 1, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLegTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLegTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLegTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightUpLegTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightUpLegTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightUpLegTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftLegTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftLegTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightLegTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightLegTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLeg
+      enablePosition: 1
+      minPosition: {x: 0, y: 0, z: 0.03}
+      maxPosition: {x: 0, y: 0, z: -0.03}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightUpLeg
+      enablePosition: 1
+      minPosition: {x: 0, y: 0, z: -0.03}
+      maxPosition: {x: 0, y: 0, z: 0.03}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: NeckBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.8, y: 1, z: 0.87}
+      maxScale: {x: 1.25, y: 1, z: 1.15}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftLegTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8, z: 0.8}
+      maxScale: {x: 1, y: 1.25, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightLegTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8, z: 0.8}
+      maxScale: {x: 1, y: 1.25, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightShoulder
+      enablePosition: 1
+      minPosition: {x: -0.03, y: 0, z: 0}
+      maxPosition: {x: 0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftShoulder
+      enablePosition: 1
+      minPosition: {x: 0.03, y: 0, z: 0}
+      maxPosition: {x: -0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftArmTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8, z: 0.8}
+      maxScale: {x: 1, y: 1.25, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftArmTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftArmTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftForeArmTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftForeArmTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftForeArmTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8, z: 0.8}
+      maxScale: {x: 1, y: 1.25, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightArmTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8, z: 0.8}
+      maxScale: {x: 1, y: 1.25, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightArmTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightArmTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightForeArmTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightForeArmTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.66, z: 0.66}
+      maxScale: {x: 1, y: 1.5, z: 1.5}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightForeArmTwist3Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8, z: 0.8}
+      maxScale: {x: 1, y: 1.25, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    blendShapes: []
+  - name: Belly
+    joints:
+    - name: HipsBind
+      enablePosition: 1
+      minPosition: {x: 0, y: 0, z: -0.013}
+      maxPosition: {x: 0, y: 0, z: 0.013}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 1, z: 0.8}
+      maxScale: {x: 1, y: 1, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 1, z: 0.74}
+      maxScale: {x: 1, y: 1, z: 1.35}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 1, z: 0.8}
+      maxScale: {x: 1, y: 1, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    blendShapes: []
+  - name: Waist
+    joints:
+    - name: HipsBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.9259259, y: 1, z: 1}
+      maxScale: {x: 1.08, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.7518797, y: 1, z: 1}
+      maxScale: {x: 1.33, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.729927, y: 1, z: 1}
+      maxScale: {x: 1.37, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: ChestBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.95238096, y: 1, z: 1}
+      maxScale: {x: 1.05, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    blendShapes: []
+  - name: Shoulder/hip ratio
+    joints:
+    - name: ChestBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 0.8, y: 1, z: 0.8}
+      maxScale: {x: 1.25, y: 1, z: 1.25}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightShoulder
+      enablePosition: 1
+      minPosition: {x: -0.03, y: 0, z: 0}
+      maxPosition: {x: 0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftShoulder
+      enablePosition: 1
+      minPosition: {x: 0.03, y: 0, z: 0}
+      maxPosition: {x: -0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightShoulderBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8695652, z: 0.8695652}
+      maxScale: {x: 1, y: 1.15, z: 1.15}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftShoulderBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8695652, z: 0.8695652}
+      maxScale: {x: 1, y: 1.15, z: 1.15}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLeg
+      enablePosition: 1
+      minPosition: {x: 0, y: 0, z: -0.02}
+      maxPosition: {x: 0, y: 0, z: 0.02}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightUpLeg
+      enablePosition: 1
+      minPosition: {x: 0, y: 0, z: 0.02}
+      maxPosition: {x: 0, y: 0, z: -0.02}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: HipsBind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1.25, y: 1, z: 1.25}
+      maxScale: {x: 0.8, y: 1, z: 0.8}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1.1, y: 1, z: 1.1}
+      maxScale: {x: 0.90909094, y: 1, z: 0.90909094}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftArmTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8695652, z: 0.8695652}
+      maxScale: {x: 1, y: 1.15, z: 1.15}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightArmTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 0.8695652, z: 0.8695652}
+      maxScale: {x: 1, y: 1.15, z: 1.15}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLegTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 1.25, z: 1.25}
+      maxScale: {x: 1, y: 0.8, z: 0.8}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLegTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 1.1, z: 1.1}
+      maxScale: {x: 1, y: 0.90909094, z: 0.90909094}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightUpLegTwist1Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 1.25, z: 1.25}
+      maxScale: {x: 1, y: 0.8, z: 0.8}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightUpLegTwist2Bind
+      enablePosition: 0
+      minPosition: {x: 0, y: 0, z: 0}
+      maxPosition: {x: 0, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 1
+      minScale: {x: 1, y: 1.1, z: 1.1}
+      maxScale: {x: 1, y: 0.90909094, z: 0.90909094}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    blendShapes: []
+  - name: Height
+    joints:
+    - name: RightUpLeg
+      enablePosition: 1
+      minPosition: {x: -0.03, y: 0, z: 0}
+      maxPosition: {x: 0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightLeg
+      enablePosition: 1
+      minPosition: {x: -0.03, y: 0, z: 0}
+      maxPosition: {x: 0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLeg
+      enablePosition: 1
+      minPosition: {x: 0.03, y: 0, z: 0}
+      maxPosition: {x: -0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftLeg
+      enablePosition: 1
+      minPosition: {x: 0.03, y: 0, z: 0}
+      maxPosition: {x: -0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Hips
+      enablePosition: 1
+      minPosition: {x: 0, y: -0.06, z: 0}
+      maxPosition: {x: 0, y: 0.06, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine1
+      enablePosition: 1
+      minPosition: {x: 0, y: -0.01, z: 0}
+      maxPosition: {x: 0, y: 0.01, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine2
+      enablePosition: 1
+      minPosition: {x: 0, y: -0.01, z: 0}
+      maxPosition: {x: 0, y: 0.01, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Chest
+      enablePosition: 1
+      minPosition: {x: 0, y: -0.01, z: 0}
+      maxPosition: {x: 0, y: 0.01, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftForeArm
+      enablePosition: 1
+      minPosition: {x: 0.015, y: 0, z: 0}
+      maxPosition: {x: -0.015, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftShoulder
+      enablePosition: 1
+      minPosition: {x: 0, y: 0.015, z: 0}
+      maxPosition: {x: 0, y: -0.015, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightForeArm
+      enablePosition: 1
+      minPosition: {x: -0.015, y: 0, z: 0}
+      maxPosition: {x: 0.015, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightShoulder
+      enablePosition: 1
+      minPosition: {x: 0, y: -0.015, z: 0}
+      maxPosition: {x: 0, y: 0.015, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    blendShapes: []
+  - name: LegTorsoRatio
+    joints:
+    - name: RightUpLeg
+      enablePosition: 1
+      minPosition: {x: -0.03, y: 0, z: 0}
+      maxPosition: {x: 0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: RightLeg
+      enablePosition: 1
+      minPosition: {x: -0.03, y: 0, z: 0}
+      maxPosition: {x: 0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftUpLeg
+      enablePosition: 1
+      minPosition: {x: 0.03, y: 0, z: 0}
+      maxPosition: {x: -0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: LeftLeg
+      enablePosition: 1
+      minPosition: {x: 0.03, y: 0, z: 0}
+      maxPosition: {x: -0.03, y: 0, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Hips
+      enablePosition: 1
+      minPosition: {x: 0, y: -0.06, z: 0}
+      maxPosition: {x: 0, y: 0.06, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine1
+      enablePosition: 1
+      minPosition: {x: 0, y: 0.02, z: 0}
+      maxPosition: {x: 0, y: -0.02, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Spine2
+      enablePosition: 1
+      minPosition: {x: 0, y: 0.02, z: 0}
+      maxPosition: {x: 0, y: -0.02, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    - name: Chest
+      enablePosition: 1
+      minPosition: {x: 0, y: 0.02, z: 0}
+      maxPosition: {x: 0, y: -0.02, z: 0}
+      enableRotation: 0
+      minRotation: {x: 0, y: 0, z: 0}
+      maxRotation: {x: 0, y: 0, z: 0}
+      enableScale: 0
+      minScale: {x: 1, y: 1, z: 1}
+      maxScale: {x: 1, y: 1, z: 1}
+      scaleLateUpdate: 0
+      invertScale: 0
+      uniformScale: 0
+    blendShapes: []

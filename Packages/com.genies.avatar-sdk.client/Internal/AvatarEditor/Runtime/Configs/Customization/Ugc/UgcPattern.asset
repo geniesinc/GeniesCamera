@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: UgcPattern
+  m_EditorClassIdentifier: 
+  breadcrumbName: 
+  _customizationController: {fileID: 3642993934894320073}
+  _viewConfig:
+    navBarButtonName: Place Image
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: 11
+    customizationEditorHeight: 130
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    actionBarFlags: 52
+--- !u!114 &3642993934894320073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1e40efdeb47d4aa78645b3e19e086, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.PatternCustomizationController)
+  m_EditorClassIdentifier: 
+  _attributeTabs:
+  - Attribute: 1
+    Icon: {fileID: 21300000, guid: 0b95cea94a345474480830f62758a480, type: 3}
+    DisplayName: Size
+  - Attribute: 2
+    Icon: {fileID: 21300000, guid: 78cd4a05b73ca4463b5503b6d5cca51b, type: 3}
+    DisplayName: Scale
+  - Attribute: 3
+    Icon: {fileID: 21300000, guid: 43a771514fbed4179bea2ddab77b5600, type: 3}
+    DisplayName: Tint
+  - Attribute: 4
+    Icon: {fileID: 21300000, guid: 8cdb310b41def424ca917d828aa59940, type: 3}
+    DisplayName: Saturation
+  - Attribute: 5
+    Icon: {fileID: 21300000, guid: f1d6247b648b8484aad9fadfb2ac4737, type: 3}
+    DisplayName: Brightness
+  _customizationViewPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/PatternCustomizationView.prefab
+  _loadingInteractionPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/StyleCustomizationView/LoadingBlocker.prefab

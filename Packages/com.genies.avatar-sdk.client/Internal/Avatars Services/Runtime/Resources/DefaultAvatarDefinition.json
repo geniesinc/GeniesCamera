@@ -1,0 +1,22 @@
+{
+	"JsonVersion": "1-0-0",
+	"Species": "unified",
+	"Outfits": [
+		[
+			"underwearBottom-0001-boxers_skin0000",
+			"underwearTop-0002-tankTop_skin0000",
+		]
+	],
+	"DNA": {
+		"female": 1.0,
+		"eyes_female_varSilverF": 1.0,
+		"lips_female_varSilverF": 1.0,
+		"nose_female_varSilverF": 1.0,
+		"jaw_female_varSilverF": 1.0
+	},
+	"HairMaterial": "HairMaterialData_RegBrownMedium",
+	"SkinMaterial": "SkinMaterialData_skin0007",
+	"EyeMaterial": "EyeMaterialData_NewBrown",
+	"EyebrowMaterial": null,
+	"FacialhairMaterial": "FacialHairMaterialData_RegBrownMedium"
+}

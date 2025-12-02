@@ -1,0 +1,26 @@
+{
+    "name": "Genies.UIFramework",
+    "rootNamespace": "Genies.UIFramework",
+    "references": [
+        "GUID:308234f6ca2189c469fb7364db9f0bd8",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:306260a3505e548aa80d101e3ae20b47",
+        "GUID:029c1c1b674aaae47a6841a0b89ad80e",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:696a0953692949b40bec8730e64e1fdd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

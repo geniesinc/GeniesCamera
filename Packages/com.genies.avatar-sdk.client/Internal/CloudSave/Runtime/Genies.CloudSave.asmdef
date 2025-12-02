@@ -1,0 +1,22 @@
+{
+    "name": "Genies.CloudSave",
+    "rootNamespace": "Genies.CloudSave",
+    "references": [
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:3a3bc432b8c514aa4aef97b11aa3303b",
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:cc45db82de60741e2905beea4bffb817"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

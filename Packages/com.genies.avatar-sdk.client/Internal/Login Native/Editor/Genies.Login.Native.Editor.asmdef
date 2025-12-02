@@ -1,0 +1,41 @@
+{
+    "name": "Genies.Login.Native.Editor",
+    "rootNamespace": "Genies.Login.Native.Editor",
+    "references": [
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.genies.sdk.avatar",
+            "expression": "",
+            "define": "GENIES_SDK"
+        },
+        {
+            "name": "com.genies.sdk.core",
+            "expression": "",
+            "define": "GENIES_SDK"
+        },
+        {
+            "name": "com.genies.avatar-sdk.client",
+            "expression": "",
+            "define": "GENIES_SDK"
+        },
+        {
+            "name": "com.genies.experience.sdk",
+            "expression": "",
+            "define": "GENIES_EXPERIENCE_SDK"
+        }
+    ],
+    "noEngineReferences": false
+}

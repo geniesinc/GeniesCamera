@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb477cfbd4c649cb8380cef8e605ef64, type: 3}
+  m_Name: UgcOutfitAssetBuilder
+  m_EditorClassIdentifier: 
+  defaultBuilder: {fileID: 11400000, guid: 22535b3adabfb6f4283d4ef9c41a6e6e, type: 2}
+  lodBuilders:
+  - {fileID: 11400000, guid: 252414598a5129b44b870d8188ffbca1, type: 2}
+  - {fileID: 11400000, guid: 22535b3adabfb6f4283d4ef9c41a6e6e, type: 2}
+  - {fileID: 11400000, guid: c17c78db502fd7441b72981937e1aea9, type: 2}
+  - {fileID: 11400000, guid: 799ba6b99393922498d49aed0667dce0, type: 2}

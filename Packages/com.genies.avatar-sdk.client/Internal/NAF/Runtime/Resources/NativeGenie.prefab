@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7880307582073396048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425387094515334874}
+  - component: {fileID: 721178742905989621}
+  - component: {fileID: 6456920835454077773}
+  - component: {fileID: 4555382390505867508}
+  m_Layer: 0
+  m_Name: NativeGenie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425387094515334874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7880307582073396048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &721178742905989621
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7880307582073396048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6850457ebd4443b4587ef35625efde8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6456920835454077773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7880307582073396048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3adc56262bd4fc0b85038a663c476e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nativeRendererPrefab: {fileID: 0}
+  tattooSettings: {fileID: 0}
+  groundHumanAvatar: 1
+  groundingThreshold: 0.001
+  megaSimpleBaker: {fileID: 11400000, guid: 8108e21a5eabd2048b1fb2fc11cf585d, type: 2}
+  urpBaker: {fileID: 11400000, guid: 2c09ee58aa179704395e452d80867e63, type: 2}
+  logGenieEvents: 0
+--- !u!114 &4555382390505867508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7880307582073396048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf035c34ab94192996c8c58816afd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetResolverConfig: {fileID: 0}
+  ignoreMeshGroups: 0
+  skipMeshGrouping: 0
+  disableRefitting: 0
+  refDebSkipMeshGrouping: 0
+  refDebSingleGroup: 1
+  refDebIncludeNonDeformedMeshes: 0
+  refDebEnableVertexAttributes: 0

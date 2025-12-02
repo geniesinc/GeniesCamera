@@ -1,0 +1,31 @@
+{
+    "name": "Genies.Customizer",
+    "rootNamespace": "Genies.Customizer",
+    "references": [
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:696a0953692949b40bec8730e64e1fdd",
+        "GUID:029c1c1b674aaae47a6841a0b89ad80e",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
+        "GUID:b8e24fd1eb19b4226afebb2810e3c19b",
+        "GUID:5258468688d02433f9fc53ddfe739a67",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:03746d41388b5432d8f92249cbbd553d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.demigiant.dotween",
+            "expression": "",
+            "define": "UNITASK_DOTWEEN_SUPPORT"
+        }
+    ],
+    "noEngineReferences": false
+}

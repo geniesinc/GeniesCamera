@@ -1,0 +1,27 @@
+{
+    "name": "Genies.Sdk.Bootstrap.Editor",
+    "rootNamespace": "Genies.Sdk.Bootstrap.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.genies.avatar-sdk.core-utilities",
+            "expression": "",
+            "define": "GENIES_SDK_CORE_UTILS"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "HAS_INPUT_SYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

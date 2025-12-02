@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a592d47fecb93d045ad956ffdac0f2e5, type: 3}
+  m_Name: UgcImagePlacement_Controller
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 0
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _breadcrumbName: Place Image
+  _viewConfig:
+    navBarButtonName: Place Image
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 1
+    customizerViewFlags: 14
+    customizationEditorHeight: 0
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    showHeaderText: 0
+    headerText: 
+    actionBarFlags: 48
+  projectorPrefab: {fileID: 3601646759358833198, guid: 2d8044f4d8b76654593217b5cc840525, type: 3}
+  _texturePlacementPrefab: {fileID: 4676325556136390783, guid: ec84e47a72ca1c344ad94a6f5758588c, type: 3}
+  texturePlacementGuideSelectedColor: {r: 0.498, g: 0.184, b: 1, a: 1}
+  texturePlacementGuideDeselectedColor: {r: 0, g: 0, b: 0, a: 0.2}
+  _discardOrKeepPopup: {fileID: 6844962715961932425, guid: 9bcfd87c24bdde940806c256f4348086, type: 3}
+  _exitIcon: {fileID: 21300000, guid: fc34cff7ebd56634f9a340940c46b4d7, type: 3}
+  _projectButtonPrefab: {fileID: 3676125646518077624, guid: d69ef569d0ac8eb4d89289ed0857df29, type: 3}
+  _projectButtonPosition: {x: -50, y: 50, z: 0}
+  _tooltipWidgetPrefab: {fileID: 6688235387442841271, guid: 344e629fc40803a45a476864fe4cfa66, type: 3}

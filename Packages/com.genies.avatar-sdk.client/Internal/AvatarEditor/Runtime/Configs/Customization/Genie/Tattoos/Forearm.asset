@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8325855998008377633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7efaced29343b7bd471b9ab1099711, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.TattooCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 1
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _cellView: {fileID: 1225775665669391065, guid: 566f77f1b79593b41ac13e2cac9fddba, type: 3}
+  _bodyArea: LeftTopForearmTattoos
+  _virtualCamera: 4
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: Forearm
+  m_EditorClassIdentifier: 
+  breadcrumbName: Forearm
+  _customizationController: {fileID: -8325855998008377633}
+  _viewConfig:
+    navBarButtonName: Forearm
+    icon: {fileID: 21300000, guid: e7fe66d41bd67401faa93da079647812, type: 3}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 248
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+    showHeaderText: 0
+    headerText: 
+    actionBarFlags: 24

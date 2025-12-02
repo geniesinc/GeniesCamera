@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: LipstickColorPresets
+  m_EditorClassIdentifier: 
+  breadcrumbName: Edit Lipstick Color
+  _customizationController: {fileID: 429499971738027103}
+  _viewConfig:
+    navBarButtonName: 
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 1
+    customizerViewFlags: -1
+    customizationEditorHeight: 248
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 0
+    headerText: 
+    actionBarFlags: 24
+--- !u!114 &429499971738027103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc5798040ac46c4ba83709ec5ac1584, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.ColorPresetCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 0
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _cellView: {fileID: 3328080792996091821, guid: 43970bb2c4427481283a0d9fefa75175, type: 3}
+  _mainType: 0
+  _virtualCamera: 11
+  _subcategory: Lipstick

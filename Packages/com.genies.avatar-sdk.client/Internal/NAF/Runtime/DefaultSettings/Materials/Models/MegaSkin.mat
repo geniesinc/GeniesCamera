@@ -1,0 +1,331 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1544219252848876656
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MegaSkin
+  m_Shader: {fileID: -6465566751694194690, guid: 6044257d986ca463989c7dcc6d4c7ab8,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Blush:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Eyeshadow:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FSkinAlbedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FSkinMetallicSmoothness:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FSkinNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceGems:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Freckles:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerBase:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerBasePattern:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerUniqueA:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerUniqueAPattern:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerUniqueB:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerUniqueBPattern:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Lipstick:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicSmoothness:
+        m_Texture: {fileID: 2800000, guid: 8ff4ab13459e65a468fcf4138212012a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: c25dee5c75a4b5d45ac583ef07981796, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_01189edfde7e4a54be17f447ec1ee8dc_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 6db3a98f22f914f478cfa22d2756992d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_01189edfde7e4a54be17f447ec1ee8dc_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 6db3a98f22f914f478cfa22d2756992d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d3633f54259b4b899a98f477888c7e00_Texture_1:
+        m_Texture: {fileID: 2800000, guid: da598faaf091e53449bdaac9cc76efd4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d3633f54259b4b899a98f477888c7e00_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: da598faaf091e53449bdaac9cc76efd4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d4298d877e2a447dbc1b050e30952127_Texture_1:
+        m_Texture: {fileID: 2800000, guid: d56eeb80e26d6af41a2be82dbf59c47f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d4298d877e2a447dbc1b050e30952127_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d56eeb80e26d6af41a2be82dbf59c47f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchNormalTangentv10_5fdecb7c32d844c9a15bf860ba6b3643_Texture_4201440171:
+        m_Texture: {fileID: 2800000, guid: 1f564ef42e3a91348aa76f0d1091bd20, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchNormalTangentv10_5fdecb7c32d844c9a15bf860ba6b3643_Texture_4201440171_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 1f564ef42e3a91348aa76f0d1091bd20, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchv10_3bbfb907b7fd444aa1673949ce9c25fb_Texture_4201440171:
+        m_Texture: {fileID: 2800000, guid: f0b3cc311bfecd944bd77346e45f35cc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchv10_3bbfb907b7fd444aa1673949ce9c25fb_Texture_4201440171_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d56eeb80e26d6af41a2be82dbf59c47f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchv10_7cdcbea3abfd44d6a2f484112ff5e94c_Texture_4201440171:
+        m_Texture: {fileID: 2800000, guid: 430ec67af5acb3545b20148829762073, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchv10_7cdcbea3abfd44d6a2f484112ff5e94c_Texture_4201440171_Texture2D:
+        m_Texture: {fileID: 2800000, guid: da598faaf091e53449bdaac9cc76efd4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchv10_8aa41c3421294b91852d931099bce166_Texture_4201440171:
+        m_Texture: {fileID: 2800000, guid: f0b3cc311bfecd944bd77346e45f35cc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTextureLODSwitchv10_8aa41c3421294b91852d931099bce166_Texture_4201440171_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d56eeb80e26d6af41a2be82dbf59c47f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stickers:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tattoos:
+        m_Texture: {fileID: 18700000, guid: 6f693107192ea34448da37b1a5a59a8e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AniHueRotation: 0
+    - _AnisoOffset: 0
+    - _Bake: 0
+    - _Blend: 0
+    - _BlushOpacity: 1
+    - _BumpScale: 1
+    - _ChannelChecker: 0
+    - _ChannelExport: 0
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _FSkin: 0
+    - _FaceGemsOpacity: 1
+    - _FrecklesOpacity: 1
+    - _Glitter: 1
+    - _GlitterTiling: 7
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _IridescenceRoughness: 0
+    - _LayerBasePatternRotation: 0
+    - _LayerBasePatternScale: 20
+    - _LayerUniqueAPatternRotation: 0
+    - _LayerUniqueAPatternScale: 20
+    - _LayerUniqueBPatternRotation: 0
+    - _LayerUniqueBPatternScale: 20
+    - _Metallic: 0
+    - _NORMAL: 0
+    - _NormalShitBlur: 0
+    - _NormalShitBlurAmount: 0.0009
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _RGBRGB: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _Tattoo1PosX: 0.82
+    - _Tattoo1PosY: 0.21
+    - _Tattoo1Rotation: 2
+    - _Tattoo1Scale: 11.6
+    - _Tattoo2PosX: 0.82
+    - _Tattoo2PosY: 0.55
+    - _Tattoo2Rotation: 0
+    - _Tattoo2Scale: 17.5
+    - _Tattoo3PosX: 0.17
+    - _Tattoo3PosY: -0.031
+    - _Tattoo3Rotation: -3
+    - _Tattoo3Scale: 21
+    - _Tattoo4PosX: 0.181
+    - _Tattoo4PosY: -0.161
+    - _Tattoo4Rotation: -7
+    - _Tattoo4Scale: 11
+    - _Tattoo5PosX: 0.839
+    - _Tattoo5PosY: -0.44
+    - _Tattoo5Rotation: -1
+    - _Tattoo5Scale: 16.8
+    - _Tattoo6PosX: 0.59
+    - _Tattoo6PosY: -0.53
+    - _Tattoo6Rotation: 8
+    - _Tattoo6Scale: 16.8
+    - _Tattoo7PosX: 0.12
+    - _Tattoo7PosY: 0.42
+    - _Tattoo7Rotation: 17
+    - _Tattoo7Scale: 20
+    - _Tattoo8PosX: -0.49
+    - _Tattoo8PosY: 0.4
+    - _Tattoo8Rotation: 2
+    - _Tattoo8Scale: 13.8
+    - _TileX: 0
+    - _TileY: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - Color_e74b433edfb343168211d3a1b772a837: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BlushColor1: {r: 0.8901961, g: 0.41960785, b: 0.36078432, a: 1}
+    - _BlushColor2: {r: 0.8901961, g: 0.41960785, b: 0.36078432, a: 1}
+    - _BlushColor3: {r: 0.8901961, g: 0.41960785, b: 0.36078432, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EyeshadowColor1: {r: 0.8117647, g: 0.15294118, b: 0.14901961, a: 1}
+    - _EyeshadowColor2: {r: 0.4, g: 0.16078432, b: 0.7254902, a: 1}
+    - _EyeshadowColor3: {r: 0.94509804, g: 0.72156864, b: 0.20784314, a: 1}
+    - _FaceGemsColor1: {r: 0.3137255, g: 0.5372549, b: 0.28235295, a: 1}
+    - _FaceGemsColor2: {r: 0.26666668, g: 0.24313726, b: 0.5176471, a: 1}
+    - _FaceGemsColor3: {r: 0.78431374, g: 0.4627451, b: 0.654902, a: 1}
+    - _FrecklesColor: {r: 0.20784314, g: 0.08627451, b: 0.03529412, a: 1}
+    - _LayerUniqueAColor: {r: 0, g: 0, b: 0, a: 0}
+    - _LayerUniqueBColor: {r: 0, g: 0, b: 0, a: 0}
+    - _LipstickColor1: {r: 0.36862746, g: 0.10980392, b: 0.12156863, a: 1}
+    - _LipstickColor2: {r: 0.46666667, g: 0.18431373, b: 0.19607843, a: 1}
+    - _LipstickColor3: {r: 0.46666667, g: 0.18431373, b: 0.19607843, a: 1}
+    - _SkinColor: {r: 0.62352943, g: 0.46666667, b: 0.36862746, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

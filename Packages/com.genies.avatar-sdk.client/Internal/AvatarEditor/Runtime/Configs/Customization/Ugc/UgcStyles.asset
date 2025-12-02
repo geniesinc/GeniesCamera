@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: UgcStyles
+  m_EditorClassIdentifier: 
+  breadcrumbName: Edit Material
+  _customizationController: {fileID: 7446190622376401067}
+  _viewConfig:
+    navBarButtonName: 
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 125
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    actionBarFlags: 48
+--- !u!114 &7446190622376401067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85a5abfb8844ea0bd104c158206132a, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.UgcStyleCustomizationController)
+  m_EditorClassIdentifier: 
+  _regionButtonIcon: {fileID: 21300000, guid: ac6ef2cf13fad3b459ee94ed08c8492a, type: 3}
+  _customizationViewPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/StyleCustomizationView/StyleCustomizationView.prefab
+  _popupMenuPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/LooksPopupMenu.prefab
+  _multiOptionPopupPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/MultiOptionPopupWidget.prefab
+  _colors:
+  - {r: 0.09411765, g: 0.07450981, b: 0.14117648, a: 1}
+  - {r: 0.2784314, g: 0.32156864, b: 0.39607844, a: 1}
+  - {r: 0.9254902, g: 0.90588236, b: 0.84313726, a: 1}
+  - {r: 0.8666667, g: 0.8352941, b: 0.84313726, a: 1}
+  - {r: 0.3882353, g: 0.5019608, b: 0.5411765, a: 1}
+  - {r: 0.5803922, g: 0.5529412, b: 0.44705883, a: 1}
+  - {r: 0.23921569, g: 0.12156863, b: 0.11372549, a: 1}
+  - {r: 0.96862745, g: 0.7607843, b: 0.9411765, a: 1}
+  - {r: 1, g: 0.92156863, b: 0.62352943, a: 1}
+  - {r: 0.57254905, g: 0.73333335, b: 0.5647059, a: 1}
+  - {r: 0.21960784, g: 0.36078432, b: 0.27450982, a: 1}
+  - {r: 0.02745098, g: 0.105882354, b: 0.10980392, a: 1}
+  - {r: 0.09803922, g: 0.54509807, b: 0.7137255, a: 1}
+  - {r: 0.14509805, g: 0.24705882, b: 0.38431373, a: 1}
+  - {r: 0.6627451, g: 0.5254902, b: 0.67058825, a: 1}
+  - {r: 0.8745098, g: 0.5254902, b: 0.6666667, a: 1}
+  - {r: 0.80784315, g: 0.34901962, b: 0.5803922, a: 1}
+  - {r: 0.41960785, g: 0.05882353, b: 0.11372549, a: 1}
+  - {r: 0.6392157, g: 0.1764706, b: 0.17254902, a: 1}
+  - {r: 0.85882354, g: 0.4117647, b: 0.23921569, a: 1}
+  - {r: 0.9764706, g: 0.62352943, b: 0.40392157, a: 1}
+  - {r: 0.93333334, g: 0.7921569, b: 0.45490196, a: 1}

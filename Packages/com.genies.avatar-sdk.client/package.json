@@ -1,0 +1,45 @@
+{
+  "name": "com.genies.avatar-sdk.client",
+  "displayName": "Genies Avatar SDK",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "unityRelease": "32f1",
+  "description": "SDK for integrating the Genies Avatar solution",
+  "samples": [
+    {
+      "displayName": "Avatar Starter Scene",
+      "description": "A simple demo of core SDK runtime functionality.",
+      "path": "Samples~/AvatarStarterScene"
+    },
+    {
+      "displayName": "Debug SDK Functions",
+      "description": "Editor debug component for core SDK runtime functionality.",
+      "path": "Samples~/DebugSdkFunctions"
+    },
+    {
+      "displayName": "Using Multiple Avatars",
+      "description": "Loading and saving avatars from local objects.",
+      "path": "Samples~/MultipleAvatars"
+    }
+  ],
+  "dependencies": {
+    "com.unity.addressables": "1.19.19",
+    "com.unity.burst": "1.8.4",
+    "com.unity.editorcoroutines": "1.0.0",
+    "com.unity.ext.nunit": "1.0.6",
+    "com.unity.mathematics": "1.2.6",
+    "com.unity.nuget.mono-cecil": "1.10.1",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.shadergraph": "12.1.9",
+    "com.unity.test-framework": "1.1.33",
+    "com.unity.textmeshpro": "3.0.8",
+    "com.unity.animation.rigging": "1.2.1",
+    "com.unity.cinemachine": "2.10.0",
+    "com.unity.cloud.ktx": "3.5.0",
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.render-pipelines.core": "14.0.11",
+    "com.unity.render-pipelines.universal": "12.1.9",
+    "com.unity.timeline": "1.7.6",
+    "com.unity.ugui": "1.0.0"
+  }
+}
