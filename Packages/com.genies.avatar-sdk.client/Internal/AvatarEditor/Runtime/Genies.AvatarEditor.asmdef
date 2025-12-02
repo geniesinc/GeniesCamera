@@ -1,0 +1,69 @@
+{
+    "name": "Genies.AvatarEditor",
+    "rootNamespace": "Genies.AvatarEditor",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:b8e3962c31543465693c9a09a2a94ec0",
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343",
+        "GUID:308234f6ca2189c469fb7364db9f0bd8",
+        "GUID:6b9b8d0ad6af44db38657f0bf2422a79",
+        "GUID:b8e24fd1eb19b4226afebb2810e3c19b",
+        "GUID:9f5739c3ff97d6b429bfa377543c8abf",
+        "GUID:951d730e5f4714cce97035e74fddf394",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:f0a1238b528228148b0454c1ee940212",
+        "GUID:330ba3cece64d49d9a21da0c97f9a9cd",
+        "GUID:e1a1c43f6254d4bacbe54fbf0f441843",
+        "GUID:d715fd21cf73f40c8b5f1cc79f8456d1",
+        "GUID:43ea4c73388e842c8ba19f206eae1a09",
+        "GUID:a525c13f41df14227b8ef7ff7ab8f7e2",
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:5258468688d02433f9fc53ddfe739a67",
+        "GUID:43271491f95454cc4be4b9839d8b8fca",
+        "GUID:20c046ccbf9d4c74bb47a4796aee848e",
+        "GUID:fe1b9c23113a49269890ae55b8860abd",
+        "GUID:6c59b28dbaac479fb42b7f08428968c2",
+        "GUID:20fa1900eb4334761ab0eba3c1fd3299",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:db0ee19fa8023cc43b7e72b68d0ab85f",
+        "GUID:f8f58785bb34440db850cba51a9857a8",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:819d2fc7b3a604f72aa5234a09a628e9",
+        "GUID:182fe663ee8fa4c0f85f08ccd13adf30",
+        "GUID:3a3bc432b8c514aa4aef97b11aa3303b",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:2cf49f9b000401e4298c506ca5f00f9c",
+        "GUID:fe567e5b0ce234f6ab770c87ef25bfd2",
+        "GUID:03746d41388b5432d8f92249cbbd553d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.genies.sdk.avatar",
+            "expression": "",
+            "define": "GENIES_SDK"
+        },
+        {
+            "name": "com.genies.sdk.core",
+            "expression": "",
+            "define": "GENIES_SDK"
+        },
+        {
+            "name": "com.genies.avatar-sdk.client",
+            "expression": "",
+            "define": "GENIES_SDK"
+        }
+    ],
+    "noEngineReferences": false
+}

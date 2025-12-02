@@ -1,0 +1,3 @@
+Baking avatars requires some shaders to be included with the build. Projects using this package may not be using those shaders which means that the developers must include them manually in "Project Settings > Graphics". Also for shader variants it gets even more complicated (I couldn't even get it working from Project Settings).
+
+By including dummy materials on a Resources folder the package itself will force the shaders to be included in the build of any project that uses it, which is an easier setup for devs and gives us more control on what needs to be included when updating things.

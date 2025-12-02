@@ -1,0 +1,30 @@
+{
+    "name": "Genies.Inventory",
+    "rootNamespace": "Genies.Inventory",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:951d730e5f4714cce97035e74fddf394",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:9c9185053947b41b79ce52ba556c0c44",
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:db0ee19fa8023cc43b7e72b68d0ab85f",
+        "GUID:597bf3ce49e48486289d72b74155809c",
+        "GUID:a525c13f41df14227b8ef7ff7ab8f7e2",
+        "GUID:b8e3962c31543465693c9a09a2a94ec0",
+        "GUID:696a0953692949b40bec8730e64e1fdd",
+        "GUID:20fa1900eb4334761ab0eba3c1fd3299"
+
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

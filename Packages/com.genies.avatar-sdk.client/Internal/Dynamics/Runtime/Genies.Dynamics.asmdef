@@ -1,0 +1,20 @@
+{
+    "name": "Genies.Dynamics",
+    "rootNamespace": "Genies.Dynamics",
+    "references": [
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343",
+        "GUID:951d730e5f4714cce97035e74fddf394",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

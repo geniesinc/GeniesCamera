@@ -1,0 +1,19 @@
+{
+    "name": "Genies.S3Service",
+    "rootNamespace": "Genies.S3Service",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:f2fd65492a81aa041b0f560209b13600"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Genies.FeatureFlags",
+    "rootNamespace": "Genies.FeatureFlags",
+    "references": [
+        "GUID:9d8c11e32fbd341b58724d87aa8f564f",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:696a0953692949b40bec8730e64e1fdd",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:cc45db82de60741e2905beea4bffb817"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

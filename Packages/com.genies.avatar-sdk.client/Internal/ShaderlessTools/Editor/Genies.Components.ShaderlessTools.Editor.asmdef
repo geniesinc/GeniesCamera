@@ -1,0 +1,18 @@
+{
+    "name": "Genies.Components.ShaderlessTools.Editor",
+    "rootNamespace": "Genies.Components.ShaderlessTools.Editor",
+    "references": [
+        "GUID:8798b5f2715944c51b4a67f10a783273"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

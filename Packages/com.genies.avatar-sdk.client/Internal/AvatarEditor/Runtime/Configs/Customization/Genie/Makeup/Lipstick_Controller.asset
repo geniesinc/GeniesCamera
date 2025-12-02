@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f374406573bd40c3a8de69a1dbe9a336, type: 3}
+  m_Name: Lipstick_Controller
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 1
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 8
+        m_Right: 8
+        m_Top: 8
+        m_Bottom: 8
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _breadcrumbName: Lipstick
+  _viewConfig:
+    navBarButtonName: Lipstick
+    icon: {fileID: 21300000, guid: 8961881dd6db64f28b0e44e112ae9b5c, type: 3}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 1
+    customizerViewFlags: -1
+    customizationEditorHeight: 248
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 0
+    headerText: 
+    actionBarFlags: 24
+  _defaultCellView: {fileID: 1225775665669391065, guid: 2dbf727fd067f415bb615260ae3c225e,
+    type: 3}
+  _defaultCellSize: {x: 88, y: 96}
+  _virtualCamera: 11
+  _cellView: {fileID: 1225775665669391065, guid: 2dbf727fd067f415bb615260ae3c225e,
+    type: 3}
+  _subcategory: 1

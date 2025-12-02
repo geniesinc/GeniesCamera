@@ -1,0 +1,20 @@
+{
+    "name": "Genies.CameraSystem",
+    "rootNamespace": "Genies.CameraSystem",
+    "references": [
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

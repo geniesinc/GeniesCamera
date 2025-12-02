@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2914ec1d324455aad78a329b2132c6, type: 3}
+  m_Name: MQ-UgcOutfitAssetBuilder
+  m_EditorClassIdentifier: 
+  lod: mid
+  mode: 1
+  material: {fileID: 2100000, guid: 4516c8e763f60eb408d29d6dcf8d09e9, type: 2}
+  splitTextureSettings: {fileID: 11400000, guid: c52ee816b2e438144a1ad23e3493ecc4,
+    type: 2}
+  maps:
+  - mapExporter: {fileID: 11400000, guid: 47fae4de5617a0748a0f8a3c195a660a, type: 2}
+    splitTextureSettings: {fileID: 0}
+    umaChannel:
+      channelType: 0
+      textureFormat: 0
+      materialPropertyName: _BaseMap
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  - mapExporter: {fileID: 11400000, guid: fff823bc8ca006e49aa398e6489d7e68, type: 2}
+    splitTextureSettings: {fileID: 11400000, guid: 07fd5b1e8ce61f14a934f7cf4a5ae092,
+      type: 2}
+    umaChannel:
+      channelType: 1
+      textureFormat: 0
+      materialPropertyName: _BumpMap
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  - mapExporter: {fileID: 11400000, guid: ca88f85f26485e144baae08a95124c2c, type: 2}
+    splitTextureSettings: {fileID: 0}
+    umaChannel:
+      channelType: 0
+      textureFormat: 0
+      materialPropertyName: _MetallicGlossMap
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  - mapExporter: {fileID: 11400000, guid: 9b7e7b6b488e25940a76f550c0a0e2dc, type: 2}
+    splitTextureSettings: {fileID: 11400000, guid: 07fd5b1e8ce61f14a934f7cf4a5ae092,
+      type: 2}
+    umaChannel:
+      channelType: 0
+      textureFormat: 0
+      materialPropertyName: _EmissionMap
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  - mapExporter: {fileID: 11400000, guid: 96b5f15485528bd47b463c52b6d1600b, type: 2}
+    splitTextureSettings: {fileID: 0}
+    umaChannel:
+      channelType: 0
+      textureFormat: 0
+      materialPropertyName: _IridescenceRGB
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  - mapExporter: {fileID: 11400000, guid: e41dc49958e37ba44be3210683ad5bff, type: 2}
+    splitTextureSettings: {fileID: 0}
+    umaChannel:
+      channelType: 0
+      textureFormat: 0
+      materialPropertyName: _GlitterRGB
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  - mapExporter: {fileID: 11400000, guid: 81c322c500dfbdc4a94486b455a27dca, type: 2}
+    splitTextureSettings: {fileID: 0}
+    umaChannel:
+      channelType: 0
+      textureFormat: 0
+      materialPropertyName: _Fresnel_Glitter_Aniso
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  - mapExporter: {fileID: 11400000, guid: 2978228df4dda244baa73f65fc826b86, type: 2}
+    splitTextureSettings: {fileID: 0}
+    umaChannel:
+      channelType: 0
+      textureFormat: 0
+      materialPropertyName: _AnisoGloss_SSS
+      sourceTextureName: 
+      Compression: 0
+      DownSample: 1
+      ConvertRenderTexture: 0
+      NonShaderTexture: 0
+  mapExportingProperties:
+    floats:
+    - name: _Bake
+      value: 1
+    - name: _Glitter
+      value: 0
+    integers: []
+    textures: []
+    colors: []
+    vectors: []

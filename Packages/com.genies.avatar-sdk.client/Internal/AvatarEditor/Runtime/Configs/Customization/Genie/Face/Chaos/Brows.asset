@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: Brows
+  m_EditorClassIdentifier: 
+  breadcrumbName: Brows
+  _customizationController: {fileID: 2575405623016325279}
+  _viewConfig:
+    navBarButtonName: Brows
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 312
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 1
+    headerText: Customizing face
+    actionBarFlags: 24
+--- !u!114 &2575405623016325279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3230e69730a745f8bf8122e99607eae, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.FaceVectorCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 1
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _virtualCamera: 11
+  _category: 5
+  _sliderConfigs:
+  - name: Thickness
+    bodyAttributeConfig: BrowThickness
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 4
+  - name: Length
+    bodyAttributeConfig: BrowLength
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 5
+  - name: Vertical Position
+    bodyAttributeConfig: BrowPositionVert
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 6
+  - name: Spacing
+    bodyAttributeConfig: BrowSpacing
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 7
+  _faceVectorSliderPrefab: Resources/Prefabs/WeightScreen/HapticSlider
+  _sliderLabelPrefab: Resources/Prefabs/WeightScreen/SliderLabel
+  _slidersContainerScrollRectPrefab: Resources/Prefabs/WeightScreen/SliderGroup

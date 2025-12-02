@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64192a8731a594adaa28da65ed68a013, type: 3}
+  m_Name: ExampleProfile1
+  m_EditorClassIdentifier: 
+  equippedAssetIds:
+  - AvatarBase/recmDqoKYpEG1TQV
+  - AvatarBase/recfFJmh7X1uPVGFQ
+  - Flair/rectbr5JSJpAJ0TBv
+  - AvatarMakeup/recBOkwY1zptSGDsQ
+  - Flair/rec66IBXg1AxfDJ8k
+  - AvatarEyes/recMe09fgv5Sl8sE
+  - WardrobeGear/recQQbSRTCTJi5ie4
+  - AvatarBase/recMIGtwe4tRvmaBw
+  - WardrobeGear/330cc0fb7c7c5752
+  - WardrobeGear/9e0747efefb53aac
+  - WardrobeGear/d53ee32e98169d58
+  - Static/BlendShapeContainer_body_female
+  serializedColors:
+    keys:
+    - gear-eyebrowsBase
+    - gear-eyebrowsR
+    - gear-eyelashesBase
+    - gear-hairB
+    - gear-hairR
+    - unified-skin
+    - gear-eyebrowsB
+    - gear-eyelashesB
+    - gear-eyebrowsG
+    - gear-hairG
+    - gear-eyelashesR
+    - unified-freckles
+    - gear-hairBase
+    - gear-eyelashesG
+    values:
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+    - {r: 0.78039217, g: 0.52156866, b: 0.18431373, a: 1}
+    - {r: 0.8, g: 0.4627451, b: 0.25490198, a: 1}
+    - {r: 0.93333334, g: 0.8235294, b: 0.7058824, a: 1}
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+    - {r: 0.5529412, g: 0.18039216, b: 0.08235294, a: 1}
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+    - {r: 0.16078432, g: 0.20784314, b: 0.59607846, a: 1}
+    - {r: 0.84313726, g: 0.69803923, b: 0.3764706, a: 1}
+    - {r: 0.19607843, g: 0.08627451, b: 0.03137255, a: 1}
+  serializedBodyAttributes:
+    keys:
+    - BrowThickness
+    - NoseWidth
+    values:
+    - 0.6171429
+    - 0.09424865
+  serializedTattooIds:
+    keys: 
+    values: []
+  HeadshotTexture: {fileID: 2800000, guid: 44f08a2c2c2454a7d99cd2ff9d33c9e9, type: 3}
+  HeadshotPath: 

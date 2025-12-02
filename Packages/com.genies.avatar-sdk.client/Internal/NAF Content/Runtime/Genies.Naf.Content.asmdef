@@ -1,0 +1,24 @@
+{
+    "name": "Genies.Naf.Content",
+    "rootNamespace": "Genies.Naf.Content",
+    "references": [
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:db0ee19fa8023cc43b7e72b68d0ab85f",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:20c046ccbf9d4c74bb47a4796aee848e",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:03746d41388b5432d8f92249cbbd553d",
+        "GUID:43271491f95454cc4be4b9839d8b8fca",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,68 @@
+// Summary: Provides parallelization for computations done in Genies Dynamics
+// Copyright: Genies, Inc.
+
+#include "Libraries/Math.cginc"
+#include "Libraries/Vector.cginc"
+#include "Libraries/DataTypes.cginc"
+
+// Kernels
+#pragma kernel SphereCollision
+#pragma kernel CapsuleCollision
+
+// Buffers
+RWStructuredBuffer<ParticleData> Particles;
+RWStructuredBuffer<SphereColliderData> SphereColliders;
+RWStructuredBuffer<CapsuleColliderData> CapsuleColliders;
+
+[numthreads(16,4,1)]
+void SphereCollision (uint3 id : SV_DispatchThreadID)
+{
+    uint pIndex = id.x;
+    uint cIndex = id.y;
+
+    if (Particles[pIndex].CollisionEnabled == 0) return;
+
+    float3 colliderCenterToParticleCenter = Particles[pIndex].CurrentCollisionCenter - SphereColliders[cIndex].CurrentPosition;
+    float sqrDistance = dot(colliderCenterToParticleCenter, colliderCenterToParticleCenter);
+    
+    // Avoid small values that could compromise stability. Assume other factors will correct this on subsequent iterations.
+    if (sqrDistance < MinVectorLengthSqr) return;
+
+    float distance = sqrt(sqrDistance);
+
+    float minDistance = Particles[pIndex].CollisionRadius + SphereColliders[cIndex].CollisionRadius;
+    
+    if (distance < minDistance)
+    {
+        // If particle sphere is within the bounds of the sphere collider, push it out by the normal from collider center to particle center.
+        float3 ejectionDirection = colliderCenterToParticleCenter / distance;
+        Particles[pIndex].CurrentCollisionCenter += ejectionDirection * (minDistance - distance);
+    }
+}
+
+[numthreads(16,4,1)]
+void CapsuleCollision (uint3 id : SV_DispatchThreadID)
+{
+    uint pIndex = id.x;
+    uint cIndex = id.y;
+
+    if (Particles[pIndex].CollisionEnabled == 0) return;
+
+    float3 closestPoint = ClosestPointOnSegment(Particles[pIndex].CurrentCollisionCenter, CapsuleColliders[cIndex].StartPosition, CapsuleColliders[cIndex].EndPosition);
+    float3 ejectionVector = Particles[pIndex].CurrentCollisionCenter - closestPoint;
+    float sqrDistance = dot(ejectionVector, ejectionVector);
+
+    // Avoid small values that could compromise stability. Assume other factors will correct this on subsequent iterations.
+    if (sqrDistance < MinVectorLengthSqr) return;
+
+    float distance = sqrt(sqrDistance);
+
+    float distanceError = (CapsuleColliders[cIndex].CollisionRadius + Particles[pIndex].CollisionRadius) - distance;
+
+    if (distanceError > 0)
+    {
+        float3 ejectionDirection = ejectionVector / distance;
+
+        Particles[pIndex].CurrentCollisionCenter += ejectionDirection * distanceError;
+    }
+}

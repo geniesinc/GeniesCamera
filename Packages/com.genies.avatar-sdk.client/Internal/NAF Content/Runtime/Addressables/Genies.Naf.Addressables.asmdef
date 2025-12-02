@@ -1,0 +1,29 @@
+{
+    "name": "Genies.Naf.Addressables",
+    "rootNamespace": "Genies.Naf.Addressables",
+    "references": [
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:db0ee19fa8023cc43b7e72b68d0ab85f",
+        "GUID:20c046ccbf9d4c74bb47a4796aee848e",
+        "GUID:2cf49f9b000401e4298c506ca5f00f9c",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:03746d41388b5432d8f92249cbbd553d",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:6c59b28dbaac479fb42b7f08428968c2",
+        "GUID:20fa1900eb4334761ab0eba3c1fd3299",
+        "GUID:597bf3ce49e48486289d72b74155809c",
+        "GUID:43271491f95454cc4be4b9839d8b8fca",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

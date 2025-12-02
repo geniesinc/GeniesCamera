@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: SkinColor
+  m_EditorClassIdentifier: 
+  breadcrumbName: Skin Color
+  _customizationController: {fileID: 3230860865213365021}
+  _viewConfig:
+    navBarButtonName: Skin Color
+    icon: {fileID: 21300000, guid: ea0b8f6a21e3d4deba02c19380049fbd, type: 3}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: 11
+    customizationEditorHeight: 0
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    actionBarFlags: 24
+--- !u!114 &3230860865213365021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4473dd53d7ef4ff4b7a17826d6bf73a0, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.SkinColorCustomizationController)
+  m_EditorClassIdentifier: 
+  dataSource: {fileID: 11400000, guid: 6ec49cf15912b47f0a8edc0e8351a8e7, type: 2}
+  virtualCamera: 1

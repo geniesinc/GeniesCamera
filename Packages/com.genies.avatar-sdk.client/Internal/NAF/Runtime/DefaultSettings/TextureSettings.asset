@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be97a50b6eb743fbb85e90e5aab228a0, type: 3}
+  m_Name: TextureSettings
+  m_EditorClassIdentifier: 
+  normalMapType: 0
+  ignoreETC1IfTextureHasAlpha: 1
+  includeTextureSources: 0
+  preferences:
+  - format: 1
+    transcodingFallbacks: 
+    hqTranscoding: 0
+  - format: 4
+    transcodingFallbacks: 
+    hqTranscoding: 0
+  - format: 2
+    transcodingFallbacks: 
+    hqTranscoding: 0
+  - format: 16
+    transcodingFallbacks: 
+    hqTranscoding: 0
+  - format: 64
+    transcodingFallbacks: 
+    hqTranscoding: 0
+  - format: 32
+    transcodingFallbacks: 
+    hqTranscoding: 0
+  - format: 8
+    transcodingFallbacks: 
+    hqTranscoding: 0
+  - format: 1
+    transcodingFallbacks: 0102
+    hqTranscoding: 1
+  - format: 4
+    transcodingFallbacks: 0102
+    hqTranscoding: 1
+  - format: 2
+    transcodingFallbacks: 0102
+    hqTranscoding: 1
+  - format: 16
+    transcodingFallbacks: 0201
+    hqTranscoding: 0
+  - format: 64
+    transcodingFallbacks: 0201
+    hqTranscoding: 0
+  - format: 32
+    transcodingFallbacks: 0201
+    hqTranscoding: 0
+  - format: 8
+    transcodingFallbacks: 0201
+    hqTranscoding: 0
+  - format: 128
+    transcodingFallbacks: 010203
+    hqTranscoding: 1

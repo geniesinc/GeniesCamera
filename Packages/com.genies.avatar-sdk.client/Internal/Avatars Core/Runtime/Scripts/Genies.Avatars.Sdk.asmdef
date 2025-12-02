@@ -1,0 +1,57 @@
+{
+    "name": "Genies.Avatars.Sdk",
+    "rootNamespace": "Genies.Avatars.Sdk",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343",
+        "GUID:9f5739c3ff97d6b429bfa377543c8abf",
+        "GUID:894b9fdc44d254ebe9461dc11ca003f2",
+        "GUID:43271491f95454cc4be4b9839d8b8fca",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:a525c13f41df14227b8ef7ff7ab8f7e2",
+        "GUID:819d2fc7b3a604f72aa5234a09a628e9",
+        "GUID:5a7286cdbb89d40fd931e7cec53b53ca",
+        "GUID:d715fd21cf73f40c8b5f1cc79f8456d1",
+        "GUID:951d730e5f4714cce97035e74fddf394",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:20c046ccbf9d4c74bb47a4796aee848e",
+        "GUID:2cf49f9b000401e4298c506ca5f00f9c",
+        "GUID:330ba3cece64d49d9a21da0c97f9a9cd",
+        "GUID:6c59b28dbaac479fb42b7f08428968c2",
+        "GUID:fe1b9c23113a49269890ae55b8860abd",
+        "GUID:db0ee19fa8023cc43b7e72b68d0ab85f",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:f2fd65492a81aa041b0f560209b13600",
+        "GUID:eecbffeb817734ff3ad1f1c5ac45ed0c",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.genies.sdk.avatar",
+            "expression": "",
+            "define": "GENIES_SDK"
+        },
+        {
+            "name": "com.genies.sdk.core",
+            "expression": "",
+            "define": "GENIES_SDK"
+        },
+        {
+            "name": "com.genies.avatar-sdk.client",
+            "expression": "",
+            "define": "GENIES_SDK"
+        }
+    ],
+    "noEngineReferences": false
+}

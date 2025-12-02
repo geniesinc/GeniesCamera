@@ -1,0 +1,30 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Input vert buffers
+StructuredBuffer<float3> _SourceVertices;
+StructuredBuffer<float3> _TargetVertices;
+
+int _SrcLen;
+int _TargetLen;
+float _gamma;  //radius
+
+RWStructuredBuffer<float> _OutDistances;
+
+[numthreads(16,16,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= (uint)_SrcLen || id.y >= (uint)_TargetLen) return;
+
+    float dist = distance(_SourceVertices[id.x], _TargetVertices[id.y]);
+    // linear
+    _OutDistances[(id.x * _TargetLen) + id.y] = dist;
+
+
+    // other Radial Basis Functions
+    float g = _gamma;
+    // gaussian
+    //_OutDistances[(id.x * _TargetLen) + id.y] = exp(-(dist * dist) / (2.0f * g * g));
+    // multi quadratic
+    //_OutDistances[(id.x * _TargetLen) + id.y] = pow((dist * dist) + (g * g), 0.5);
+}

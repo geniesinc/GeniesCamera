@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: c5ad43d6dd70ccb45a5e5dd13e14a95f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - targetMaterial: {instanceID: 0}
+  - targetShader: {fileID: -6465566751694194690, guid: 5e1bb1c00cd4cff4aad9e8add58a8701,
+      type: 3}
+  - mainTexture: {instanceID: 0}
+  - baseNormalMap: {fileID: 2800000, guid: 9228633a300315d49aea4b08ece87425, type: 3}
+  - occlusionMap: {instanceID: 0}
+  - microSkinMap: {instanceID: 0}
+  - translusencyMap: {fileID: 2800000, guid: f691c7d4d006635418628521ff0f104c, type: 3}
+  - specularGloss: {fileID: 2800000, guid: 647cc2ac29a0b344595ee7d704ccc61c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

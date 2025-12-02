@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117d2602b3a04404926fe3e80da5b011, type: 3}
+  m_Name: AssetResolverConfig
+  m_EditorClassIdentifier: 
+  cacheSizeMB: 2000
+  cacheFile: cache.bin
+  useCache: 1
+  cachePath: cache
+  resolvers:
+  - disabled: 0
+    type: 1
+    order: 1
+    sourcePath: localResolver
+    uriSchemes:
+    - 'file:'
+  - disabled: 0
+    type: 2
+    order: 4
+    sourcePath: https://d2r0ofqkxzbpt1.cloudfront.net
+    uriSchemes:
+    - http
+    - https
+  - disabled: 0
+    type: 2
+    order: 5
+    sourcePath: https://dyqx2eklpbefu.cloudfront.net
+    uriSchemes:
+    - http
+    - https
+  - disabled: 0
+    type: 0
+    order: 6
+    sourcePath: 
+    uriSchemes: []

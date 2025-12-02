@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: Hips
+  m_EditorClassIdentifier: 
+  breadcrumbName: Hips
+  _customizationController: {fileID: 8949875861069718249}
+  _viewConfig:
+    navBarButtonName: Hips
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 312
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 1
+    headerText: Customizing Body Shape
+    actionBarFlags: 24
+--- !u!114 &8949875861069718249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d9276574757954abfc402b004680bd, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.BodyVectorCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 0
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _sliderConfigs:
+  - name: Thickness
+    bodyAttributeConfig: WeightLowerTorso
+    lowerValue: -0.08507061
+    upperValue: 0.5766886
+    showLabel: 1
+    vectorType: 6
+  _bodyShapeSliderPrefab: Resources/Prefabs/WeightScreen/HapticSlider
+  _sliderLabelPrefab: Resources/Prefabs/WeightScreen/SliderLabel
+  _slidersContainerScrollRectPrefab: Resources/Prefabs/WeightScreen/SliderGroup

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b592c900748314449bd5f9b2ac503ac, type: 3}
+  m_Name: femaleHeavy_gSkelModifierPreset
+  m_EditorClassIdentifier: 
+  Name: femaleHeavy
+  StartingBodyVariation: female
+  GSkelModValues:
+  - Name: WeightArms
+    Value: 0.7978722
+  - Name: WeightHeadNeck
+    Value: 0.77697814
+  - Name: WeightLegs
+    Value: 0.59549415
+  - Name: WeightLowerTorso
+    Value: 0.57668865
+  - Name: WeightUpperTorso
+    Value: 0.5671371
+  - Name: Belly
+    Value: 0.6295223
+  - Name: Waist
+    Value: 0.45370972
+  - Name: ShoulderSize
+    Value: -0.4763953
+  - Name: HipSize
+    Value: 0
+  - Name: Height
+    Value: 0
+  - Name: Leg/torso ratio
+    Value: 0

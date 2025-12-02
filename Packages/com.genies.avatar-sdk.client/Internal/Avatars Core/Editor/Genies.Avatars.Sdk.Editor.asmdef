@@ -1,0 +1,31 @@
+{
+    "name": "Genies.Avatars.Sdk.Editor",
+    "rootNamespace": "Genies.Avatars.Sdk.Editor",
+    "references": [
+        "GUID:0b3119cd82384613ab1b06b99f844eb4",
+        "GUID:f8f58785bb34440db850cba51a9857a8",
+        "GUID:20c046ccbf9d4c74bb47a4796aee848e",
+        "GUID:f2fd65492a81aa041b0f560209b13600",
+        "GUID:a5ad1e7e455634f3ab7f5faab80a7850",
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516",
+        "GUID:eecbffeb817734ff3ad1f1c5ac45ed0c",
+        "GUID:5f3ed2645ae4f4031aa8ecbf7d47e002",
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:330ba3cece64d49d9a21da0c97f9a9cd",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:478a2357cc57436488a56e564b08d223",
+        "GUID:b28f5741ad3bd67409131517d8c1da8d",
+        "GUID:bbac8104a2d51ec4d8cc0bac4382e343"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

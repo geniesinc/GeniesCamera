@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8600862699190127315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6829d6bcd5b774da9843eee6969cc45f, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.UgcTemplatesCustomizationController)
+  m_EditorClassIdentifier: 
+  _cellView: {fileID: 0}
+  _splitNavigationNode:
+    displayName: 
+    icon: {fileID: 0}
+    overridePrefab: {fileID: 0}
+    showNotification: 0
+    isSelected: 0
+--- !u!114 &-5394492987631251770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6829d6bcd5b774da9843eee6969cc45f, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.UgcSplitsCustomizationController)
+  m_EditorClassIdentifier: 
+  _cellView: {fileID: 1225775665669391065, guid: 2dbf727fd067f415bb615260ae3c225e, type: 3}
+  _splitNavigationNode:
+    displayName: Piece
+    icon: {fileID: 21300000, guid: 44b760ac46004496a97962b81907b211, type: 3}
+    overridePrefab: {fileID: 4682193517572139247, guid: e8801bacb6d57483e872190b748e4dd0, type: 3}
+    showNotification: 0
+    isSelected: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: UgcSplits
+  m_EditorClassIdentifier: 
+  breadcrumbName: Swap Pieces
+  _customizationController: {fileID: -5394492987631251770}
+  _viewConfig:
+    navBarButtonName: UgcTemplates
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 4682193517572139247, guid: e8801bacb6d57483e872190b748e4dd0, type: 3}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 112
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    actionBarFlags: 144
+--- !u!114 &6906158197767868549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458703d809a37454485ec72b5020e806, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.UgcTemplateCustomizationController)
+  m_EditorClassIdentifier: 
+  _layoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _cellView: {fileID: 929982570102562047, guid: 7d3e80db014eb4bb29ac19d395fd8107, type: 3}
+  _templateFilters: []

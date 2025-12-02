@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: BodyPresetsIcon
+  m_EditorClassIdentifier: 
+  breadcrumbName: Presets
+  _customizationController: {fileID: 2320114956192527045}
+  _viewConfig:
+    navBarButtonName: Presets
+    icon: {fileID: 21300000, guid: beba105b788d2473a8674c3fc81f6788, type: 3}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 95
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    actionBarFlags: 24
+--- !u!114 &2320114956192527045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e787e80cae4459afe84b3c468a8a8b, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.BodyPresetCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 0
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _cellView: {fileID: 2441657938330285278, guid: 147d8212f8c894f6da62af6536f0e528, type: 3}
+  _thumbnailData:
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/femaleSkinny_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/femaleSkinny_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/femaleMedium_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/femaleMedium_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/femaleHeavy_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/femaleHeavy_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/androgynousSkinny_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/androgynousSkinny_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/androgynousMedium_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/androgynousMedium_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/androgynousHeavy_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/androgynousHeavy_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/maleSkinny_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/maleSkinny_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/maleMedium_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/maleMedium_gSkelModifierPresetIcon
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/maleHeavy_gSkelModifierPreset
+    _uiDataPath: Resources/Presets/PresetIcons/Resources/maleHeavy_gSkelModifierPresetIcon
+--- !u!114 &3436335149581579353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e787e80cae4459afe84b3c468a8a8b, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.BodyTypeCustomizationController)
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 0
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _cellView: {fileID: 2441657938330285278, guid: 147d8212f8c894f6da62af6536f0e528, type: 3}
+  _thumbnailData:
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/femaleSkinny_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/femaleSkinny_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/femaleMedium_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/femaleMedium_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/femaleHeavy_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/femaleHeavy_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/androgynousSkinny_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/androgynousSkinny_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/androgynousMedium_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/androgynousMedium_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/androgynousHeavy_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/androgynousHeavy_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/maleSkinny_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/maleSkinny_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/maleMedium_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/maleMedium_gSkelModifierPresetIcon.asset
+  - _bodyDataPath: Resources/Body/gSkelModifierPresets/maleHeavy_gSkelModifierPreset
+    _uiDataPath: Assets/Genies/ChaosMode/UI/PresetIcons/Resources/maleHeavy_gSkelModifierPresetIcon.asset

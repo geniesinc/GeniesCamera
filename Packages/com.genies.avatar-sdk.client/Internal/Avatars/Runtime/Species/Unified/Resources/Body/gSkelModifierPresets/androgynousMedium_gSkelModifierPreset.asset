@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b592c900748314449bd5f9b2ac503ac, type: 3}
+  m_Name: androgynousMedium_gSkelModifierPreset
+  m_EditorClassIdentifier: 
+  Name: androgynousMedium
+  StartingBodyVariation: male
+  GSkelModValues:
+  - Name: WeightArms
+    Value: 0.22595918
+  - Name: WeightHeadNeck
+    Value: -0.072683394
+  - Name: WeightLegs
+    Value: 0.33744684
+  - Name: WeightLowerTorso
+    Value: 0.17581242
+  - Name: WeightUpperTorso
+    Value: 0.13044155
+  - Name: Belly
+    Value: 0.15312698
+  - Name: Waist
+    Value: 0.099249005
+  - Name: ShoulderSize
+    Value: 0.02552116
+  - Name: HipSize
+    Value: 0.19282663
+  - Name: Height
+    Value: 0
+  - Name: Leg/torso ratio
+    Value: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e52b0e3e7c44769a31416d606a4b18, type: 3}
+  m_Name: MQ-MegaSimpleBaker
+  m_EditorClassIdentifier: 
+  converters:
+  - {fileID: 11400000, guid: 946a2d32c4cc8134f8edffe3560f9971, type: 2}
+  - {fileID: 11400000, guid: d4483597e56a2064a8c915978a1c4050, type: 2}
+  - {fileID: 11400000, guid: ab40248b0a7b3af4e92fe20d9e4ebd0f, type: 2}
+  - {fileID: 11400000, guid: a08b8df5bc33d554da9718582f24f155, type: 2}
+  - {fileID: 11400000, guid: 99e2fd01b628530469a33d382a4aa7af, type: 2}
+  conversionNotSupportedBehaviour: 3
+  materialCopier: {fileID: 0}
+  cacheConversions: 0

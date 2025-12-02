@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8704879589944585235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3914051429655461533}
+  - component: {fileID: 4360534459341661921}
+  - component: {fileID: 8556700558925070242}
+  - component: {fileID: -7915919509240239009}
+  m_Layer: 0
+  m_Name: SurveillanceFixedAnglesCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3914051429655461533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704879589944585235}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4360534459341661921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704879589944585235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c26251a3e1f5ac41afa5ffb404c5f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 0
+  m_StandbyUpdate: 2
+  m_Weight0: 0.5
+  m_Weight1: 0.5
+  m_Weight2: 0.5
+  m_Weight3: 0.5
+  m_Weight4: 0.5
+  m_Weight5: 0.5
+  m_Weight6: 0.5
+  m_Weight7: 0.5
+--- !u!114 &8556700558925070242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704879589944585235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04d3e651cf150049a5aa56dbbec9dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCameraPrefab: {fileID: 4449507545874001970, guid: 2e18a588d8bb6fb448a3a2b780fe3bce, type: 3}
+  fieldOfView: 60
+  nearClipPlane: 0.1
+  farClipPlane: 1000
+  isTransitionImmediate: 0
+  cameraAngles:
+  - name: Top Front Right
+    position: {x: -1.2, y: 3, z: 1.2}
+    direction: {x: 45, y: 135, z: 0}
+  - name: Top Back Right
+    position: {x: -1.2, y: 3, z: -1.2}
+    direction: {x: 45, y: 45, z: 1}
+  - name: Top Back Left
+    position: {x: 1.2, y: 3, z: -1.2}
+    direction: {x: 45, y: -45, z: 0}
+  - name: Top Front Left
+    position: {x: 1.2, y: 3, z: 1.2}
+    direction: {x: 45, y: -135, z: 0}
+  swipeDetectionEnabler: {fileID: -7915919509240239009}
+--- !u!114 &-7915919509240239009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704879589944585235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eff7dd23bb79794099073503f5cd546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressActionReference: {fileID: -9217415294068472836, guid: 5dd610d756b3eb247b1d0c35b1fa5bda, type: 3}
+  currentScreenPosActionReference: {fileID: -1384037677064240314, guid: 5dd610d756b3eb247b1d0c35b1fa5bda, type: 3}
+  minimumDistance: 0.2
+  directionThreshold: 0.9

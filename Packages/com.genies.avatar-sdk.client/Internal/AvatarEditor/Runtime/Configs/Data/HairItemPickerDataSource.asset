@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6d4bc4065883b45b562f693e0570f9, type: 3}
+  m_Name: HairItemPickerDataSource
+  m_EditorClassIdentifier: 
+  _layoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _defaultCellView: {fileID: 1225775665669391065, guid: 2dbf727fd067f415bb615260ae3c225e,
+    type: 3}
+  _defaultCellSize: {x: 56, y: 56}
+  hairColorDataSource: {fileID: 11400000, guid: 2c10e07c632c3459295ab68daa4fa76b,
+    type: 2}
+  _cellView: {fileID: 1225775665669391065, guid: 2dbf727fd067f415bb615260ae3c225e,
+    type: 3}

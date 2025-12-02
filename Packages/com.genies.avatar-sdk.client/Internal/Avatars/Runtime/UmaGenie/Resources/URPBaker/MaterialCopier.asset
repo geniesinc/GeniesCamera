@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6077fd527341d0afe66ce3ff91b0fa, type: 3}
+  m_Name: MaterialCopier
+  m_EditorClassIdentifier: 
+  textureCopier: {fileID: 11400000, guid: f6c975f297bb8a24b91e60d277d5ff28, type: 2}
+  cacheCopies: 1
+  copyTextures: 1
+  useCustomNameForTextureCopies: 1
+  customTextureNamesFormat: '{0}--{2}'
+  tryToFindShaderFix: 1

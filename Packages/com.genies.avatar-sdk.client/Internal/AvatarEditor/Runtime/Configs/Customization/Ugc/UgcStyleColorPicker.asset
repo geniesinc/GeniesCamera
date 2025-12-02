@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6799654266086936749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 496cdfb55d5648e99513c812676aef9c, type: 3}
+  m_Name: Customization Controller (Genies.Customizer.UgcStyleColorPickerCustomizationController)
+  m_EditorClassIdentifier: 
+  _colorPickerPrefab: Assets/Genies/Looks/Customization/Resources/Prefabs/HsvColorSpectrumPicker.prefab
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e727eacd672490fa6d076959e8bf0a, type: 3}
+  m_Name: UgcStyleColorPicker
+  m_EditorClassIdentifier: 
+  breadcrumbName: 
+  _customizationController: {fileID: -6799654266086936749}
+  _viewConfig:
+    navBarButtonName: 
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    customizerViewFlags: 11
+    customizationEditorHeight: 170
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    actionBarFlags: 32

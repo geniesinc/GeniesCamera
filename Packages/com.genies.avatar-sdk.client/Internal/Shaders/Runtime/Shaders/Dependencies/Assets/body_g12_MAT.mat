@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5587868748847154327
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: body_g12_MAT
+  m_Shader: {fileID: -6465566751694194690, guid: d6f07593d33c4b1478bd171a0a3ad1e4, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Blush:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Eyeshadow:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceGems:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Freckles:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Lipstick:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicSmoothness:
+        m_Texture: {fileID: 2800000, guid: 4b77f21a546023d4e85022b1d60c34b2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 5707963b2bc234c43a8554600b65c0d6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d3633f54259b4b899a98f477888c7e00_Texture_1:
+        m_Texture: {fileID: 2800000, guid: da598faaf091e53449bdaac9cc76efd4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d4298d877e2a447dbc1b050e30952127_Texture_1:
+        m_Texture: {fileID: 2800000, guid: d56eeb80e26d6af41a2be82dbf59c47f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stickers:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tattoos:
+        m_Texture: {fileID: 18700000, guid: decbc23a3411e5d4a8a863647863a9cb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BlushOpacity: 0.6
+    - _FaceGemsOpacity: 1
+    - _FrecklesOpacity: 0.6
+    - _IridescenceRoughness: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Tattoo1PosX: 0.22
+    - _Tattoo1PosY: 0.08
+    - _Tattoo1Rotation: 0
+    - _Tattoo1Scale: 9.8
+    - _Tattoo2PosX: 0.24
+    - _Tattoo2PosY: 0.379
+    - _Tattoo2Rotation: 0
+    - _Tattoo2Scale: 17.1
+    - _Tattoo3PosX: 0.56
+    - _Tattoo3PosY: -0.25
+    - _Tattoo3Rotation: -2
+    - _Tattoo3Scale: 22.3
+    - _Tattoo4PosX: 0.56
+    - _Tattoo4PosY: -0.43
+    - _Tattoo4Rotation: -2
+    - _Tattoo4Scale: 13.9
+    - _Tattoo5PosX: -0.11
+    - _Tattoo5PosY: 0.13
+    - _Tattoo5Rotation: -8
+    - _Tattoo5Scale: 16.8
+    - _Tattoo6PosX: -0.265
+    - _Tattoo6PosY: 0.15
+    - _Tattoo6Rotation: 0
+    - _Tattoo6Scale: 17.6
+    - _Tattoo7PosX: 0
+    - _Tattoo7PosY: -0.74
+    - _Tattoo7Rotation: 0
+    - _Tattoo7Scale: 20.4
+    - _Tattoo8PosX: -0.76
+    - _Tattoo8PosY: -0.12
+    - _Tattoo8Rotation: 0
+    - _Tattoo8Scale: 18.3
+    m_Colors:
+    - _BlushColor1: {r: 1, g: 0, b: 0, a: 1}
+    - _BlushColor2: {r: 0, g: 1, b: 0, a: 1}
+    - _BlushColor3: {r: 0, g: 0, b: 1, a: 1}
+    - _EyeshadowColor1: {r: 1, g: 0, b: 0, a: 1}
+    - _EyeshadowColor2: {r: 0, g: 1, b: 0, a: 1}
+    - _EyeshadowColor3: {r: 0, g: 0, b: 1, a: 1}
+    - _FaceGemsColor1: {r: 1, g: 0, b: 0, a: 1}
+    - _FaceGemsColor2: {r: 0, g: 1, b: 0, a: 1}
+    - _FaceGemsColor3: {r: 0, g: 0, b: 1, a: 1}
+    - _FrecklesColor: {r: 1, g: 0, b: 0, a: 1}
+    - _LipstickColor1: {r: 1, g: 0, b: 0, a: 1}
+    - _LipstickColor2: {r: 0, g: 1, b: 0, a: 1}
+    - _LipstickColor3: {r: 0, g: 0, b: 1, a: 1}
+    - _SkinColor: {r: 0.6117647, g: 0.47450978, b: 0.38039213, a: 1}
+  m_BuildTextureStacks: []

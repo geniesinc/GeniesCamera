@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64192a8731a594adaa28da65ed68a013, type: 3}
+  m_Name: ExampleProfile2
+  m_EditorClassIdentifier: 
+  equippedAssetIds:
+  - AvatarBase/recmDqoKYpEG1TQV
+  - AvatarBase/recmdZ4c4ENEO817
+  - WardrobeGear/rec8qpkbTPHRtSXlC
+  - AvatarBase/rec8rmVwUelN6ikDw
+  - Flair/rec77MkRoHD28riKs
+  - AvatarBase/rec7TIb2dkM125D6k
+  - AvatarBase/recBiIYOL9QuLNMqq
+  - AvatarEyes/recme09FGV50gdvv
+  - Flair/recnT8NqYQEpDvtdI
+  - WardrobeGear/recTNxVJz1lKOw1qV
+  - WardrobeGear/9677fa88aa645dfc
+  - WardrobeGear/recHFiVJiWKatZ0p6
+  - WardrobeGear/976d13497f65ae04
+  - WardrobeGear/ba7383afc44bfe0d
+  serializedColors:
+    keys:
+    - gear-hairB
+    - unified-skin
+    - gear-eyelashesBase
+    - gear-eyebrowsBase
+    - gear-hairBase
+    - gear-eyebrowsR
+    - unified-freckles
+    - gear-eyelashesB
+    - gear-eyebrowsB
+    - gear-eyelashesR
+    - gear-hairG
+    - gear-eyebrowsG
+    - gear-eyelashesG
+    - gear-hairR
+    values:
+    - {r: 0, g: 0, b: 0, a: 1}
+    - {r: 0.7411765, g: 0.61960787, b: 0.49019608, a: 1}
+    - {r: 0.8, g: 0.300592, b: 0.25120002, a: 1}
+    - {r: 0.36862746, g: 0.2627451, b: 0, a: 1}
+    - {r: 0.047058824, g: 0.047058824, b: 0.047058824, a: 1}
+    - {r: 0.36862746, g: 0.2627451, b: 0, a: 1}
+    - {r: 0.16078432, g: 0.20784314, b: 0.59607846, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.36862746, g: 0.2627451, b: 0, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.07450981, g: 0.07450981, b: 0.078431375, a: 1}
+    - {r: 0.36862746, g: 0.2627451, b: 0, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.0627451, g: 0.05882353, b: 0.0627451, a: 1}
+  serializedBodyAttributes:
+    keys:
+    - WeightLegs
+    - WeightUpperTorso
+    - WeightHeadNeck
+    - ShoulderSize
+    - WeightArms
+    - Waist
+    - WeightLowerTorso
+    - HipSize
+    - Belly
+    values:
+    - 0.59549415
+    - 0.22118354
+    - 0.9811474
+    - 0.5260536
+    - 0.8053349
+    - 0.51042354
+    - 0.19849801
+    - 0.096413255
+    - 1
+  serializedTattooIds:
+    keys: 
+    values: []
+  HeadshotTexture: {fileID: 2800000, guid: ee3dd2614577e4c39a8ceee0a70a5b42, type: 3}
+  HeadshotPath: 

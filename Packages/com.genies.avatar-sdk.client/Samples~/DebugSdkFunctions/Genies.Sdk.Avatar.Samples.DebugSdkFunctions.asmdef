@@ -1,0 +1,22 @@
+{
+    "name": "Genies.Sdk.Avatar.Samples.DebugSdkFunctions",
+    "rootNamespace": "Genies.Sdk.Avatar.Samples.DebugSdkFunctions",
+    "references": [
+        "GUID:bc9105d1bd11d4235a2eaa5f633d3516",
+        "GUID:cc45db82de60741e2905beea4bffb817",
+        "GUID:e00537590c217414e8b036dd2610e045",
+        "GUID:9d050d6ddbd1846c68c0b1c4cb5c1e06",
+        "GUID:b14a1d6f094294608a71c141c3e1aee6",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

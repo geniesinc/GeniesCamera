@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3230e69730a745f8bf8122e99607eae, type: 3}
+  m_Name: Eyes_Controller
+  m_EditorClassIdentifier: 
+  useCustomLayoutConfig: 1
+  customLayoutConfig:
+    horizontalOrVerticalLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: 8
+    gridLayoutConfig:
+      padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      spacing: {x: 8, y: 8}
+      columnCount: 4
+      cellSize: {x: 88, y: 96}
+  _breadcrumbName: Eyes
+  _viewConfig:
+    navBarButtonName: Eyes
+    icon: {fileID: 0}
+    customNodePrefab: {fileID: 0}
+    showNavBarCreateNewItemCta: 0
+    showGlobalNavBar: 0
+    customizerViewFlags: -1
+    customizationEditorHeight: 312
+    hasCustomBackgroundColor: 0
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+    showHeaderText: 1
+    headerText: Customizing face
+    actionBarFlags: 24
+  _virtualCamera: 11
+  _category: 4
+  _sliderConfigs:
+  - name: Size
+    bodyAttributeConfig: EyeSize
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 0
+  - name: Vertical Position
+    bodyAttributeConfig: EyePositionVert
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 1
+  - name: Spacing
+    bodyAttributeConfig: EyeSpacing
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 2
+  - name: Rotation
+    bodyAttributeConfig: EyeTilt
+    lowerValue: -1
+    upperValue: 1
+    showLabel: 1
+    vectorType: 3
+  _faceVectorSliderPrefab: Resources/Prefabs/WeightScreen/HapticSlider
+  _sliderLabelPrefab: Resources/Prefabs/WeightScreen/SliderLabel
+  _slidersContainerScrollRectPrefab: Resources/Prefabs/WeightScreen/SliderGroup
